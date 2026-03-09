@@ -1,0 +1,27 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": {
+          "tool": "Bash",
+          "command": "git push"
+        },
+        "command": "node -e \"console.log('\\n⚠️  Git Push 提醒：请确认已完成代码审查和测试\\n')\""
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": {
+          "tool": "Edit",
+          "glob": "**/*.{ts,tsx}"
+        },
+        "command": "node -e \"const fs=require('fs'); const f='$FILE'; if(fs.existsSync(f) && fs.readFileSync(f,'utf8').includes('console.log')) console.log('\\n⚠️  警告: 检测到 console.log，请在提交前移除\\n');\""
+      }
+    ],
+    "SessionEnd": [
+      {
+        "command": "node -e \"console.log('\\n📝 会话结束，记得保存重要上下文\\n')\""
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+# Sensitive files
+.credentials.json
+*.log
+
+# Temp files
+*~
+.DS_Store
+
+# Git
+.git/
+
+# Backups
+*backup*
+*.bak
+
+# Session data (may contain sensitive info)
+.webnovel-current-project
+
+# Claude Code internal
+.omc/
+.omc-config.json
+
+# Stats and cache
+stats-cache.json
+.statsig/
+
+# Sensitive directories (contain secrets)
+debug/
+file-history/
+history.jsonl
+transcripts/
+projects/
+settings.local.json
+
+# Skills directory - sync separately
+skills/
+
+# Webnovel writer
+webnovel-writer/
+
+# Other temp/cached
+shell-snapshots/
+tasks/
+teams/
+todos/
+plans/
+output-stores/
+hud/
+paste-cache/

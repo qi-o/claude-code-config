@@ -1,0 +1,41 @@
+{
+  "effortLevel": "high",
+  "enabledPlugins": {
+    "apify-ultimate-scraper@apify-agent-skills": true,
+    "oh-my-claudecode@omc": true,
+    "superpowers@superpowers-marketplace": true
+  },
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "sk-cp-7LWkJKyNoO4AyZzPJS0G2zcTipqpm5tvTKNvuOFBF99sW3ez6XNDtgCb_08yEr_87NaOQyRk8coNLOki_tDGs0XiQZuMIal6HElMPdW9ZZLSgfI_cXj3xOA",
+    "ANTHROPIC_BASE_URL": "https://api.minimaxi.com/anthropic",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "MiniMax-M2.5",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "MiniMax-M2.5",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "MiniMax-M2.5",
+    "ANTHROPIC_MODEL": "MiniMax-M2.5",
+    "ANTHROPIC_REASONING_MODEL": "MiniMax-M2.5",
+    "API_TIMEOUT_MS": "3000000",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "node \"C:/Users/ZDS/.claude/hooks/gitnexus/gitnexus-hook.cjs\"",
+            "statusMessage": "Enriching with GitNexus graph context...",
+            "timeout": 8000,
+            "type": "command"
+          }
+        ],
+        "matcher": "Grep|Glob|Bash"
+      }
+    ]
+  },
+  "includeCoAuthoredBy": false,
+  "skipDangerousModePermissionPrompt": true,
+  "statusLine": {
+    "command": "node C:/Users/ZDS/.claude/hud/omc-hud.mjs",
+    "type": "command"
+  }
+}
