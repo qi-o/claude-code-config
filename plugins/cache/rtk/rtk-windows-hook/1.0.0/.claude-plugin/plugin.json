@@ -1,0 +1,4 @@
+{
+  "name": "rtk-windows-hook",
+  "description": "RTK (Rust Token Killer) PreToolUse hook for Windows - auto-rewrites supported commands with rtk prefix for token savings."
+}

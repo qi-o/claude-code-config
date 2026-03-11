@@ -1,22 +1,73 @@
 {
   "version": 2,
   "plugins": {
+    "dev-browser@dev-browser-marketplace": [
+      {
+        "scope": "project",
+        "projectPath": "C:\\Users\\ZDS",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\dev-browser-marketplace\\dev-browser\\unknown",
+        "version": "unknown",
+        "installedAt": "2026-01-01T06:25:50.114Z",
+        "lastUpdated": "2026-02-07T01:48:48.476Z"
+      }
+    ],
+    "scientific-skills@claude-scientific-skills": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\claude-scientific-skills\\scientific-skills\\b271271df41b",
+        "version": "b271271df41b",
+        "installedAt": "2026-01-05T09:59:03.301Z",
+        "lastUpdated": "2026-03-06T13:11:53.905Z"
+      }
+    ],
+    "ralph-loop@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\claude-plugins-official\\ralph-loop\\unknown",
+        "version": "unknown",
+        "installedAt": "2026-01-08T02:58:28.696Z",
+        "lastUpdated": "2026-01-12T11:26:49.370Z"
+      }
+    ],
     "oh-my-claudecode@omc": [
       {
         "scope": "user",
-        "version": "4.7.10"
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.7.10",
+        "version": "4.7.10",
+        "installedAt": "2026-02-23T07:55:55.808Z",
+        "lastUpdated": "2026-03-11T02:20:47.922Z",
+        "gitCommitSha": "6baad43c0eb19e4df2193c70b1028ffd7bceb299"
       }
     ],
     "apify-ultimate-scraper@apify-agent-skills": [
       {
         "scope": "user",
-        "version": "1.4.1"
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\apify-agent-skills\\apify-ultimate-scraper\\1.4.1",
+        "version": "1.4.1",
+        "installedAt": "2026-03-02T04:15:59.527Z",
+        "lastUpdated": "2026-03-10T09:39:19.604Z",
+        "gitCommitSha": "df6b198b8285a1b56347a15185e0daf5c69bef3a"
+      }
+    ],
+    "webnovel-writer@webnovel-writer-marketplace": [
+      {
+        "scope": "project",
+        "projectPath": "C:\\Users\\ZDS",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\webnovel-writer-marketplace\\webnovel-writer\\5.5.0",
+        "version": "5.5.0",
+        "installedAt": "2026-03-06T13:31:25.729Z",
+        "lastUpdated": "2026-03-07T14:22:52.146Z",
+        "gitCommitSha": "af21db4580fec34ab69cf5e646c14a96dc30d7a2"
       }
     ],
     "superpowers@superpowers-marketplace": [
       {
         "scope": "user",
-        "version": "5.0.0"
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\superpowers-marketplace\\superpowers\\5.0.0",
+        "version": "5.0.0",
+        "installedAt": "2026-03-10T14:27:16.316Z",
+        "lastUpdated": "2026-03-10T14:27:16.316Z",
+        "gitCommitSha": "33e55e60b2efcb69509bc233dfc128112012b2c8"
       }
     ]
   }

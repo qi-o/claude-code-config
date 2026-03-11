@@ -1,0 +1,7 @@
+{
+  "timestamp": 1773223028294,
+  "data": null,
+  "error": true,
+  "errorReason": "no_credentials",
+  "source": "anthropic"
+}
