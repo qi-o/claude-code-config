@@ -29,7 +29,7 @@
       "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\omc",
-    "lastUpdated": "2026-03-11T02:20:38.597Z"
+    "lastUpdated": "2026-03-15T13:26:02.833Z"
   },
   "superpowers-marketplace": {
     "source": {
@@ -46,5 +46,13 @@
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\apify-agent-skills",
     "lastUpdated": "2026-03-02T04:15:50.003Z"
+  },
+  "pua-skills": {
+    "source": {
+      "source": "github",
+      "repo": "tanweai/pua"
+    },
+    "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\pua-skills",
+    "lastUpdated": "2026-03-13T04:02:15.528Z"
   }
 }

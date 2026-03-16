@@ -12,7 +12,7 @@
     "superpowers@superpowers-marketplace": true
   },
   "env": {
-    "ANTHROPIC_AUTH_TOKEN": "sk-cp-7LWkJKyNoO4AyZzPJS0G2zcTipqpm5tvTKNvuOFBF99sW3ez6XNDtgCb_08yEr_87NaOQyRk8coNLOki_tDGs0XiQZuMIal6HElMPdW9ZZLSgfI_cXj3xOA",
+    "ANTHROPIC_AUTH_TOKEN": "YOUR_API_KEY_HERE",
     "ANTHROPIC_BASE_URL": "https://api.minimaxi.com/anthropic",
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "MiniMax-M2.5",
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "MiniMax-M2.5",

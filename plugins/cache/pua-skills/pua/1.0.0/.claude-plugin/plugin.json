@@ -1,0 +1,22 @@
+{
+    "name": "pua",
+    "version": "1.0.0",
+    "description": "PUA Debugging Motivator -- forces Claude Code to exhaust all solutions before giving up, using corporate PUA rhetoric from Chinese tech giants (Alibaba, ByteDance, Huawei, Tencent). Turns 'I cannot solve this' into systematic debugging with escalating pressure levels.",
+    "author": {
+        "name": "探微安全实验室",
+        "url": "https://github.com/tanweai"
+    },
+    "homepage": "https://github.com/tanweai/pua",
+    "repository": "https://github.com/tanweai/pua",
+    "license": "MIT",
+    "keywords": [
+        "debugging",
+        "pua",
+        "motivation",
+        "error-handling",
+        "systematic-debugging",
+        "alibaba",
+        "corporate-culture",
+        "never-give-up"
+    ]
+}

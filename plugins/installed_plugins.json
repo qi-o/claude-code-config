@@ -32,10 +32,10 @@
     "oh-my-claudecode@omc": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.7.10",
-        "version": "4.7.10",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.8.2",
+        "version": "4.8.2",
         "installedAt": "2026-02-23T07:55:55.808Z",
-        "lastUpdated": "2026-03-11T02:20:47.922Z",
+        "lastUpdated": "2026-03-15T13:26:14.436Z",
         "gitCommitSha": "6baad43c0eb19e4df2193c70b1028ffd7bceb299"
       }
     ],
@@ -68,6 +68,16 @@
         "installedAt": "2026-03-10T14:27:16.316Z",
         "lastUpdated": "2026-03-10T14:27:16.316Z",
         "gitCommitSha": "33e55e60b2efcb69509bc233dfc128112012b2c8"
+      }
+    ],
+    "pua@pua-skills": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\pua-skills\\pua\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-13T04:02:18.502Z",
+        "lastUpdated": "2026-03-13T04:02:18.502Z",
+        "gitCommitSha": "a82ced91d1ec752d2538ba66f0132fbf4ce5ad22"
       }
     ]
   }
