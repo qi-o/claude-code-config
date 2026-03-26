@@ -32,10 +32,10 @@
     "oh-my-claudecode@omc": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.9.0",
-        "version": "4.9.0",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.9.1",
+        "version": "4.9.1",
         "installedAt": "2026-02-23T07:55:55.808Z",
-        "lastUpdated": "2026-03-19T12:30:54.198Z",
+        "lastUpdated": "2026-03-24T05:26:02.843Z",
         "gitCommitSha": "6baad43c0eb19e4df2193c70b1028ffd7bceb299"
       }
     ],
@@ -73,11 +73,21 @@
     "pua@pua-skills": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\pua-skills\\pua\\1.1.1",
-        "version": "1.1.1",
-        "installedAt": "2026-03-13T04:02:18.502Z",
-        "lastUpdated": "2026-03-19T12:32:43.365Z",
-        "gitCommitSha": "a82ced91d1ec752d2538ba66f0132fbf4ce5ad22"
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\pua-skills\\pua\\3.0.0",
+        "version": "3.0.0",
+        "installedAt": "2026-03-26T09:06:03.044Z",
+        "lastUpdated": "2026-03-26T09:06:03.044Z",
+        "gitCommitSha": "7d039d0aa94cb27723e4188cd72a18c42c1732d2"
+      }
+    ],
+    "claude-subconscious@claude-subconscious": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\claude-subconscious\\claude-subconscious\\2.0.2",
+        "version": "2.0.2",
+        "installedAt": "2026-03-26T08:46:13.996Z",
+        "lastUpdated": "2026-03-26T08:46:13.996Z",
+        "gitCommitSha": "9d5a7e9c274f429f7657b58c9b1a9cb2e56cd0b3"
       }
     ]
   }

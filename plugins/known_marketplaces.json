@@ -29,7 +29,7 @@
       "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\omc",
-    "lastUpdated": "2026-03-19T12:30:40.656Z"
+    "lastUpdated": "2026-03-24T05:25:48.997Z"
   },
   "superpowers-marketplace": {
     "source": {
@@ -53,6 +53,14 @@
       "repo": "tanweai/pua"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\pua-skills",
-    "lastUpdated": "2026-03-19T12:32:42.929Z"
+    "lastUpdated": "2026-03-26T09:05:55.394Z"
+  },
+  "claude-subconscious": {
+    "source": {
+      "source": "github",
+      "repo": "letta-ai/claude-subconscious"
+    },
+    "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\claude-subconscious",
+    "lastUpdated": "2026-03-26T08:45:58.549Z"
   }
 }
