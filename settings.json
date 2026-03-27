@@ -1,17 +1,4 @@
 {
-  "alwaysThinkingEnabled": true,
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  },
-  "effortLevel": "high",
-  "enabledPlugins": {
-    "apify-ultimate-scraper@apify-agent-skills": true,
-    "claude-subconscious@claude-subconscious": true,
-    "oh-my-claudecode@omc": true,
-    "pua@pua-skills": true,
-    "superpowers@superpowers-marketplace": true
-  },
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "1326e435339449fd8cfcb076de16b2e2.j0Q8kpouEMOxGpce",
     "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
@@ -22,8 +9,28 @@
     "ANTHROPIC_REASONING_MODEL": "GLM-5-Turbo",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "ENABLE_LSP_TOOL": "1",
-    "ENABLE_TOOL_SEARCH": "true"
+    "ENABLE_TOOL_SEARCH": "true",
+    "LETTA_API_KEY": "sk-let-MjU2ZjgxYzktMzg3MS00ZmIzLWJjZmQtMjhiNDI2M2FmOTJjOjJkYjIwM2JkLWEzMGUtNDQwNS1hNzkzLThmM2Q5ZDAyMDM1OA==",
+    "LETTA_MODE": "whisper",
+    "LETTA_SDK_TOOLS": "read-only"
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "enabledPlugins": {
+    "apify-ultimate-scraper@apify-agent-skills": true,
+    "claude-subconscious@claude-subconscious": true,
+    "oh-my-claudecode@omc": true,
+    "pua@pua-skills": true,
+    "superpowers@superpowers-marketplace": true
   },
   "extraKnownMarketplaces": {},
-  "skipDangerousModePermissionPrompt": true
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true,
+  "permissions": {
+    "defaultMode": "auto"
+  }
 }
