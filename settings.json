@@ -13,7 +13,7 @@
     "LETTA_API_KEY": "sk-let-MjU2ZjgxYzktMzg3MS00ZmIzLWJjZmQtMjhiNDI2M2FmOTJjOjJkYjIwM2JkLWEzMGUtNDQwNS1hNzkzLThmM2Q5ZDAyMDM1OA==",
     "LETTA_MODE": "whisper",
     "LETTA_SDK_TOOLS": "read-only",
-    "GITHUB_PERSONAL_ACCESS_TOKEN": "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"
+    "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_TOKEN_HERE"
   },
   "attribution": {
     "commit": "",
