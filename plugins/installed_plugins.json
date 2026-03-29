@@ -32,10 +32,10 @@
     "oh-my-claudecode@omc": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.9.1",
-        "version": "4.9.1",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.9.3",
+        "version": "4.9.3",
         "installedAt": "2026-02-23T07:55:55.808Z",
-        "lastUpdated": "2026-03-24T05:26:02.843Z",
+        "lastUpdated": "2026-03-29T07:53:01.653Z",
         "gitCommitSha": "6baad43c0eb19e4df2193c70b1028ffd7bceb299"
       }
     ],
@@ -88,6 +88,16 @@
         "installedAt": "2026-03-26T08:46:13.996Z",
         "lastUpdated": "2026-03-26T08:46:13.996Z",
         "gitCommitSha": "9d5a7e9c274f429f7657b58c9b1a9cb2e56cd0b3"
+      }
+    ],
+    "typescript-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\claude-plugins-official\\typescript-lsp\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-29T08:03:16.008Z",
+        "lastUpdated": "2026-03-29T08:03:16.008Z",
+        "gitCommitSha": "d53f6ca4cdb000c671dfdc1c181b021e97c25505"
       }
     ]
   }

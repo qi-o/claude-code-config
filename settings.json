@@ -1,17 +1,4 @@
 {
-  "alwaysThinkingEnabled": true,
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  },
-  "effortLevel": "high",
-  "enabledPlugins": {
-    "apify-ultimate-scraper@apify-agent-skills": true,
-    "claude-subconscious@claude-subconscious": true,
-    "oh-my-claudecode@omc": true,
-    "pua@pua-skills": true,
-    "superpowers@superpowers-marketplace": true
-  },
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "1326e435339449fd8cfcb076de16b2e2.j0Q8kpouEMOxGpce",
     "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
@@ -25,12 +12,31 @@
     "ENABLE_TOOL_SEARCH": "true",
     "LETTA_API_KEY": "sk-let-MjU2ZjgxYzktMzg3MS00ZmIzLWJjZmQtMjhiNDI2M2FmOTJjOjJkYjIwM2JkLWEzMGUtNDQwNS1hNzkzLThmM2Q5ZDAyMDM1OA==",
     "LETTA_MODE": "whisper",
-    "LETTA_SDK_TOOLS": "read-only"
+    "LETTA_SDK_TOOLS": "read-only",
+    "GITHUB_PERSONAL_ACCESS_TOKEN": "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"
   },
-  "extraKnownMarketplaces": {},
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "permissions": {
     "defaultMode": "auto"
   },
-  "skipAutoPermissionPrompt": true,
-  "skipDangerousModePermissionPrompt": true
+  "statusLine": {
+    "type": "command",
+    "command": "node C:/Users/ZDS/.claude/hud/omc-hud.mjs"
+  },
+  "enabledPlugins": {
+    "apify-ultimate-scraper@apify-agent-skills": true,
+    "claude-subconscious@claude-subconscious": true,
+    "oh-my-claudecode@omc": true,
+    "pua@pua-skills": true,
+    "superpowers@superpowers-marketplace": true,
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {},
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true
 }
