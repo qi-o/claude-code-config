@@ -5,7 +5,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\claude-plugins-official",
-    "lastUpdated": "2026-03-19T12:32:18.247Z"
+    "lastUpdated": "2026-03-30T04:00:30.828Z"
   },
   "dev-browser-marketplace": {
     "source": {
@@ -13,7 +13,7 @@
       "repo": "sawyerhood/dev-browser"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\dev-browser-marketplace",
-    "lastUpdated": "2026-03-19T12:32:26.901Z"
+    "lastUpdated": "2026-03-30T04:00:40.974Z"
   },
   "anthropic-agent-skills": {
     "source": {
@@ -21,7 +21,7 @@
       "repo": "anthropics/skills"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\anthropic-agent-skills",
-    "lastUpdated": "2026-03-19T12:31:59.531Z"
+    "lastUpdated": "2026-03-30T04:00:50.642Z"
   },
   "omc": {
     "source": {
@@ -29,7 +29,7 @@
       "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\omc",
-    "lastUpdated": "2026-03-29T07:52:50.651Z"
+    "lastUpdated": "2026-03-30T04:01:32.283Z"
   },
   "superpowers-marketplace": {
     "source": {
@@ -37,7 +37,7 @@
       "url": "https://github.com/obra/superpowers-marketplace.git"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\superpowers-marketplace",
-    "lastUpdated": "2026-03-19T12:32:49.584Z"
+    "lastUpdated": "2026-03-30T04:01:35.341Z"
   },
   "apify-agent-skills": {
     "source": {
@@ -45,7 +45,7 @@
       "url": "https://github.com/apify/agent-skills.git"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\apify-agent-skills",
-    "lastUpdated": "2026-03-19T12:32:07.986Z"
+    "lastUpdated": "2026-03-30T04:01:39.074Z"
   },
   "pua-skills": {
     "source": {
@@ -53,7 +53,7 @@
       "repo": "tanweai/pua"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\pua-skills",
-    "lastUpdated": "2026-03-26T09:05:55.394Z"
+    "lastUpdated": "2026-03-30T04:01:50.370Z"
   },
   "claude-subconscious": {
     "source": {
@@ -61,6 +61,6 @@
       "repo": "letta-ai/claude-subconscious"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\claude-subconscious",
-    "lastUpdated": "2026-03-26T08:45:58.549Z"
+    "lastUpdated": "2026-03-30T04:02:02.348Z"
   }
 }

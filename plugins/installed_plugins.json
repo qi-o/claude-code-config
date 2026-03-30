@@ -23,10 +23,10 @@
     "ralph-loop@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\claude-plugins-official\\ralph-loop\\d53f6ca4cdb0",
-        "version": "d53f6ca4cdb0",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\claude-plugins-official\\ralph-loop\\1.0.0",
+        "version": "1.0.0",
         "installedAt": "2026-01-08T02:58:28.696Z",
-        "lastUpdated": "2026-03-19T12:32:18.288Z"
+        "lastUpdated": "2026-03-30T04:05:48.121Z"
       }
     ],
     "oh-my-claudecode@omc": [
@@ -42,10 +42,10 @@
     "apify-ultimate-scraper@apify-agent-skills": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\apify-agent-skills\\apify-ultimate-scraper\\1.4.1",
-        "version": "1.4.1",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\apify-agent-skills\\apify-ultimate-scraper\\2.0.0",
+        "version": "2.0.0",
         "installedAt": "2026-03-02T04:15:59.527Z",
-        "lastUpdated": "2026-03-10T09:39:19.604Z",
+        "lastUpdated": "2026-03-30T04:05:45.703Z",
         "gitCommitSha": "df6b198b8285a1b56347a15185e0daf5c69bef3a"
       }
     ],
@@ -63,20 +63,20 @@
     "superpowers@superpowers-marketplace": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\superpowers-marketplace\\superpowers\\5.0.5",
-        "version": "5.0.5",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\superpowers-marketplace\\superpowers\\5.0.6",
+        "version": "5.0.6",
         "installedAt": "2026-03-10T14:27:16.316Z",
-        "lastUpdated": "2026-03-19T12:32:53.240Z",
+        "lastUpdated": "2026-03-30T04:05:52.292Z",
         "gitCommitSha": "33e55e60b2efcb69509bc233dfc128112012b2c8"
       }
     ],
     "pua@pua-skills": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\pua-skills\\pua\\3.0.0",
-        "version": "3.0.0",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\pua-skills\\pua\\3.1.0",
+        "version": "3.1.0",
         "installedAt": "2026-03-26T09:06:03.044Z",
-        "lastUpdated": "2026-03-26T09:06:03.044Z",
+        "lastUpdated": "2026-03-30T04:02:12.335Z",
         "gitCommitSha": "7d039d0aa94cb27723e4188cd72a18c42c1732d2"
       }
     ],

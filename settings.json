@@ -10,10 +10,10 @@
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "ENABLE_LSP_TOOL": "1",
     "ENABLE_TOOL_SEARCH": "true",
+    "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_TOKEN_HERE",
     "LETTA_API_KEY": "sk-let-MjU2ZjgxYzktMzg3MS00ZmIzLWJjZmQtMjhiNDI2M2FmOTJjOjJkYjIwM2JkLWEzMGUtNDQwNS1hNzkzLThmM2Q5ZDAyMDM1OA==",
     "LETTA_MODE": "whisper",
-    "LETTA_SDK_TOOLS": "read-only",
-    "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_TOKEN_HERE"
+    "LETTA_SDK_TOOLS": "read-only"
   },
   "attribution": {
     "commit": "",
@@ -38,5 +38,6 @@
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "autoUpdatesChannel": "latest"
 }

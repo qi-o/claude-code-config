@@ -1,11 +1,13 @@
+> [!IMPORTANT]
+> Claude Subconscious is demo app built using the Letta Code SDK, and is not intended to be used in production.
+>
+> If you want to use a coding agent that runs background subconscious agents, use [**Letta Code**](https://github.com/letta-ai/letta-code), which is also fully open source.
+>
+> Install the Letta Code CLI with `npm install -g @letta-ai/letta-code`, then use `letta` to launch.
+
 # Claude Subconscious
 
-A background agent that whispers to Claude Code. A [Letta](https://letta.com) agent that watches your sessions, reads your files, builds up memory over time, and whispers guidance back.
-
-> [!IMPORTANT]
-> Claude Subconscious is an experimental way to extend Claude Code (a closed source / black box agent) with the power of Letta's memory system, tool access, and context engineering.
->
-> If you're looking for a coding agent that's memory-first, model agnostic, and fully open source, we recommend using [**Letta Code**](https://github.com/letta-ai/letta-code).
+A background agent that whispers to Claude Code. A subconcious agent that watches your sessions, reads your files, builds up memory over time, and whispers guidance back.
 
 ![evil claude](assets/evil-claude.jpeg)
 
