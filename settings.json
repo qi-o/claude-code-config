@@ -1,51 +1,46 @@
 {
-  "env": {
-    "ANTHROPIC_AUTH_TOKEN": "1326e435339449fd8cfcb076de16b2e2.j0Q8kpouEMOxGpce",
-    "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "GLM-5-Turbo",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "GLM-5.1",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "GLM-5-Turbo",
-    "ANTHROPIC_MODEL": "GLM-5.1",
-    "ANTHROPIC_REASONING_MODEL": "GLM-5.1",
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
-    "ENABLE_LSP_TOOL": "1",
-    "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_TOKEN_HERE",
-    "LETTA_API_KEY": "sk-let-MjU2ZjgxYzktMzg3MS00ZmIzLWJjZmQtMjhiNDI2M2FmOTJjOjJkYjIwM2JkLWEzMGUtNDQwNS1hNzkzLThmM2Q5ZDAyMDM1OA==",
-    "LETTA_MODE": "whisper",
-    "LETTA_SDK_TOOLS": "read-only"
-  },
+  "alwaysThinkingEnabled": true,
   "attribution": {
     "commit": "",
     "pr": ""
   },
-  "includeCoAuthoredBy": false,
-  "permissions": {
-    "defaultMode": "auto"
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "node C:/Users/ZDS/.claude/hud/omc-hud.mjs"
-  },
+  "effortLevel": "high",
   "enabledPlugins": {
     "apify-ultimate-scraper@apify-agent-skills": true,
     "claude-subconscious@claude-subconscious": true,
+    "codex@openai-codex": true,
     "oh-my-claudecode@omc": true,
     "pua@pua-skills": true,
     "superpowers@superpowers-marketplace": true,
-    "typescript-lsp@claude-plugins-official": true,
-    "codex@openai-codex": true
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "YOUR_API_KEY_HERE",
+    "ANTHROPIC_BASE_URL": "https://www.packyapi.com",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku-4-5-20251001",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-6",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-6",
+    "ANTHROPIC_MODEL": "claude-opus-4-6",
+    "ANTHROPIC_REASONING_MODEL": "claude-opus-4-6",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "ENABLE_LSP_TOOL": "1",
+    "ENABLE_TOOL_SEARCH": "true"
   },
   "extraKnownMarketplaces": {
-    "openai-codex": {
+    "pua-skills": {
       "source": {
-        "source": "github",
-        "repo": "openai/codex-plugin-cc"
+        "repo": "tanweai/pua",
+        "source": "github"
       }
     }
   },
-  "alwaysThinkingEnabled": true,
-  "effortLevel": "high",
-  "autoUpdatesChannel": "latest",
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "skipAutoPermissionPrompt": true,
   "skipDangerousModePermissionPrompt": true,
-  "skipAutoPermissionPrompt": true
+  "statusLine": {
+    "command": "node C:/Users/ZDS/.claude/hud/omc-hud.mjs",
+    "type": "command"
+  }
 }
