@@ -109,6 +109,16 @@
         "lastUpdated": "2026-03-31T03:09:57.212Z",
         "gitCommitSha": "9cb4fe4099195b2587c402117a3efce6ab5aac78"
       }
+    ],
+    "source-verifier@source-verifier-marketplace": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\source-verifier-marketplace\\source-verifier\\0.2.0",
+        "version": "0.2.0",
+        "installedAt": "2026-03-31T13:05:02.278Z",
+        "lastUpdated": "2026-03-31T13:05:02.278Z",
+        "gitCommitSha": "8f8ab35356c4e66f445786f75b8c0e647d28be51"
+      }
     ]
   }
 }
