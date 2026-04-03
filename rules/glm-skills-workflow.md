@@ -3,12 +3,12 @@
 ## 环境要求
 
 所有 GLM 技能共享 `ZHIPU_API_KEY` 环境变量（已在 settings.json 配置）。
-脚本位于 `~/skills/<skill-name>/scripts/`。
+脚本位于 `~/.claude/skills/<skill-name>/scripts/`。
 
 ## 多模态理解（glmv-caption）
 
 **触发**：用户发送图片/视频要求分析内容，或需要理解论文图表的视觉信息
-**脚本**：`python ~/skills/glmv-caption/scripts/glmv_caption.py`
+**脚本**：`python ~/.claude/skills/glmv-caption/scripts/glmv_caption.py`
 **协作**：与 ai4scholar 互补 — ai4scholar 提取文本，glmv-caption 提取视觉信息（图表、示意图、实验照片）
 **科研场景**：Western blot 解读、实验结果截图分析、显微镜图片描述、论文图表理解
 
@@ -24,7 +24,7 @@
 ## 视觉定位（glmv-grounding）
 
 **触发**：医学影像标注、细胞图片定位、组织切片 ROI 标注时
-**脚本**：`python ~/skills/glmv-grounding/scripts/glm_grounding_cli.py`
+**脚本**：`python ~/.claude/skills/glmv-grounding/scripts/glm_grounding_cli.py`
 **坐标**：归一化 0-1000，格式 `[x1, y1, x2, y2]`
 **输出**：边界框坐标 + 可视化图片（`--visualize`）
 **依赖**：Pillow, opencv-python, numpy, matplotlib, decord
@@ -32,7 +32,7 @@
 ## 论文转演示（glmv-pdf-to-ppt）
 
 **触发**：需要将论文转为组会汇报演示文稿时
-**脚本目录**：`~/skills/glmv-pdf-to-ppt/scripts/`
+**脚本目录**：`~/.claude/skills/glmv-pdf-to-ppt/scripts/`
   - `pdf_to_images.py` — PDF 转图片
   - `crop.py` — 图片裁剪（千分位坐标）
   - `generate_slide.py` — 生成 HTML 幻灯片

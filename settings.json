@@ -1,20 +1,4 @@
 {
-  "alwaysThinkingEnabled": true,
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  },
-  "autoUpdatesChannel": "latest",
-  "effortLevel": "high",
-  "enabledPlugins": {
-    "apify-ultimate-scraper@apify-agent-skills": true,
-    "claude-subconscious@claude-subconscious": true,
-    "codex@openai-codex": true,
-    "oh-my-claudecode@omc": true,
-    "pua@pua-skills": true,
-    "superpowers@superpowers-marketplace": true,
-    "typescript-lsp@claude-plugins-official": true
-  },
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "1326e435339449fd8cfcb076de16b2e2.j0Q8kpouEMOxGpce",
     "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
@@ -31,22 +15,39 @@
     "LETTA_SDK_TOOLS": "read-only",
     "ZHIPU_API_KEY": "1326e435339449fd8cfcb076de16b2e2.j0Q8kpouEMOxGpce"
   },
-  "extraKnownMarketplaces": {
-    "openai-codex": {
-      "source": {
-        "repo": "openai/codex-plugin-cc",
-        "source": "github"
-      }
-    }
+  "attribution": {
+    "commit": "",
+    "pr": ""
   },
   "includeCoAuthoredBy": false,
   "permissions": {
     "defaultMode": "auto"
   },
-  "skipAutoPermissionPrompt": true,
-  "skipDangerousModePermissionPrompt": true,
   "statusLine": {
-    "command": "node C:/Users/ZDS/.claude/hud/omc-hud.mjs",
-    "type": "command"
-  }
+    "type": "command",
+    "command": "node C:/Users/ZDS/.claude/hud/omc-hud.mjs"
+  },
+  "enabledPlugins": {
+    "apify-ultimate-scraper@apify-agent-skills": true,
+    "claude-subconscious@claude-subconscious": true,
+    "codex@openai-codex": true,
+    "oh-my-claudecode@omc": true,
+    "pua@pua-skills": true,
+    "superpowers@superpowers-marketplace": true,
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    }
+  },
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "autoUpdatesChannel": "latest",
+  "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true,
+  "autoDreamEnabled": true
 }

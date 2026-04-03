@@ -32,10 +32,10 @@
     "oh-my-claudecode@omc": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.9.3",
-        "version": "4.9.3",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.10.1",
+        "version": "4.10.1",
         "installedAt": "2026-02-23T07:55:55.808Z",
-        "lastUpdated": "2026-03-29T07:53:01.653Z",
+        "lastUpdated": "2026-04-03T03:59:55.326Z",
         "gitCommitSha": "6baad43c0eb19e4df2193c70b1028ffd7bceb299"
       }
     ],
