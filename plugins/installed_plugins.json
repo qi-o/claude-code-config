@@ -32,10 +32,10 @@
     "oh-my-claudecode@omc": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.10.1",
-        "version": "4.10.1",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.10.2",
+        "version": "4.10.2",
         "installedAt": "2026-02-23T07:55:55.808Z",
-        "lastUpdated": "2026-04-03T03:59:55.326Z",
+        "lastUpdated": "2026-04-04T16:40:27.584Z",
         "gitCommitSha": "6baad43c0eb19e4df2193c70b1028ffd7bceb299"
       }
     ],
@@ -83,10 +83,10 @@
     "claude-subconscious@claude-subconscious": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\claude-subconscious\\claude-subconscious\\2.0.2",
-        "version": "2.0.2",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\claude-subconscious\\claude-subconscious\\2.1.1",
+        "version": "2.1.1",
         "installedAt": "2026-03-26T08:46:13.996Z",
-        "lastUpdated": "2026-03-26T08:46:13.996Z",
+        "lastUpdated": "2026-04-04T07:15:59.417Z",
         "gitCommitSha": "9d5a7e9c274f429f7657b58c9b1a9cb2e56cd0b3"
       }
     ],

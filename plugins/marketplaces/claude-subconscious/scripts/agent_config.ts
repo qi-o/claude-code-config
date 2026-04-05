@@ -27,12 +27,14 @@ const DEFAULT_AGENT_FILE = path.join(__dirname, '..', 'Subconscious.af');
 // Preferred models in order of preference for auto-selection
 // Tilted towards quality - Subconscious needs good instruction following and tool use
 const PREFERRED_MODELS = [
+  'letta/auto',                   // Letta Cloud auto-routing
   'anthropic/claude-sonnet-4-5', // Best for agents per Anthropic
   'openai/gpt-4.1-mini',         // Good balance, 1M context, cheap
   'anthropic/claude-haiku-4-5',  // Fast Claude option
   'openai/gpt-5.2',              // Flagship fallback
   'google_ai/gemini-3-flash',    // Google's balanced option
   'google_ai/gemini-2.5-flash',  // Fallback
+  'minimax/MiniMax-M2.7',        // MiniMax flagship, 1M context
 ];
 
 interface Config {

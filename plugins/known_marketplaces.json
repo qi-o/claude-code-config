@@ -5,7 +5,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\claude-plugins-official",
-    "lastUpdated": "2026-03-30T04:00:30.828Z"
+    "lastUpdated": "2026-04-04T07:15:40.216Z"
   },
   "dev-browser-marketplace": {
     "source": {
@@ -21,7 +21,7 @@
       "repo": "anthropics/skills"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\anthropic-agent-skills",
-    "lastUpdated": "2026-03-30T04:00:50.642Z"
+    "lastUpdated": "2026-04-04T07:15:20.520Z"
   },
   "omc": {
     "source": {
@@ -29,7 +29,7 @@
       "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\omc",
-    "lastUpdated": "2026-04-03T03:59:46.241Z"
+    "lastUpdated": "2026-04-04T16:40:14.783Z"
   },
   "superpowers-marketplace": {
     "source": {
@@ -45,7 +45,7 @@
       "url": "https://github.com/apify/agent-skills.git"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\apify-agent-skills",
-    "lastUpdated": "2026-03-30T04:01:39.074Z"
+    "lastUpdated": "2026-04-04T07:15:30.998Z"
   },
   "pua-skills": {
     "source": {
@@ -61,7 +61,7 @@
       "repo": "letta-ai/claude-subconscious"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\claude-subconscious",
-    "lastUpdated": "2026-03-30T04:02:02.348Z"
+    "lastUpdated": "2026-04-04T07:15:59.148Z"
   },
   "openai-codex": {
     "source": {

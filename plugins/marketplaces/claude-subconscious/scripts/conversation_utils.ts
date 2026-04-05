@@ -666,12 +666,25 @@ export function spawnSilentWorker(
       });
     }
   } else {
-    child = spawn(NPX_CMD, ['tsx', workerScript, payloadFile], {
-      detached: true,
-      stdio: 'ignore',
-      cwd,
-      env: process.env,
-    });
+    // Prefer local tsx CLI to ensure plugin dependencies are resolvable.
+    // npx tsx resolves to a global cache that can't find @letta-ai/letta-code-sdk.
+    const tsxCli = path.join(__dirname, '..', 'node_modules', 'tsx', 'dist', 'cli.mjs');
+    if (fs.existsSync(tsxCli)) {
+      child = spawn(process.execPath, [tsxCli, workerScript, payloadFile], {
+        detached: true,
+        stdio: 'ignore',
+        cwd,
+        env: process.env,
+      });
+    } else {
+      // Fallback: npx (may fail if dependencies aren't in global cache)
+      child = spawn(NPX_CMD, ['tsx', workerScript, payloadFile], {
+        detached: true,
+        stdio: 'ignore',
+        cwd,
+        env: process.env,
+      });
+    }
   }
   child.unref();
   return child;

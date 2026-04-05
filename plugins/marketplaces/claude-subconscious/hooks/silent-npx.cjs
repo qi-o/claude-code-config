@@ -21,8 +21,20 @@ const args = process.argv.slice(2); // e.g. ['tsx', 'path/to/script.ts']
 let child;
 
 if (args[0] === 'tsx') {
-  const scriptArgs = args.slice(1); // everything after 'tsx'
+  let scriptArgs = args.slice(1); // everything after 'tsx'
   const pluginRoot = path.resolve(__dirname, '..');
+
+  // Fix for #34: If CLAUDE_PLUGIN_ROOT was empty, script paths resolve to
+  // absolute paths like "/scripts/foo.ts" which don't exist. Re-resolve
+  // them relative to the plugin root (which we know from __dirname).
+  scriptArgs = scriptArgs.map(arg => {
+    if (!fs.existsSync(arg) && arg.includes('/scripts/')) {
+      const basename = path.basename(arg);
+      const resolved = path.join(pluginRoot, 'scripts', basename);
+      if (fs.existsSync(resolved)) return resolved;
+    }
+    return arg;
+  });
   const tsxCli = path.join(pluginRoot, 'node_modules', 'tsx', 'dist', 'cli.mjs');
 
   if (isWindows) {

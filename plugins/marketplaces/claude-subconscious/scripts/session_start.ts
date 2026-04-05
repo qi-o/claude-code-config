@@ -256,6 +256,7 @@ async function main(): Promise<void> {
   let tty: fs.WriteStream | null = null;
   try {
     tty = fs.createWriteStream('/dev/tty');
+    tty.on('error', () => { tty = null; }); // Handle async ENXIO when /dev/tty unavailable
   } catch {
     // TTY not available (e.g., non-interactive session)
   }

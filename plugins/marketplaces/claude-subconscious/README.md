@@ -185,13 +185,15 @@ The plugin **automatically detects available models** on your Letta server and c
 #### Auto-Selection Priority
 
 When the agent's model isn't available, the plugin selects from available models in this order:
-1. `anthropic/claude-sonnet-4-5` (recommended - best for agents)
-2. `openai/gpt-4.1-mini` (good balance, 1M context, cheap)
-3. `anthropic/claude-haiku-4-5` (fast Claude option)
-4. `openai/gpt-5.2` (flagship fallback)
-5. `google_ai/gemini-3-flash` (Google's balanced option)
-6. `google_ai/gemini-2.5-flash` (fallback)
-7. First available model on the server
+1. `letta/auto` (Letta Cloud auto-routing)
+2. `anthropic/claude-sonnet-4-5` (recommended - best for agents)
+3. `openai/gpt-4.1-mini` (good balance, 1M context, cheap)
+4. `anthropic/claude-haiku-4-5` (fast Claude option)
+5. `openai/gpt-5.2` (flagship fallback)
+6. `google_ai/gemini-3-flash` (Google's balanced option)
+7. `google_ai/gemini-2.5-flash` (fallback)
+8. `minimax/MiniMax-M2.7` (MiniMax flagship, 1M context)
+9. First available model on the server
 
 #### Manual Override
 
@@ -205,9 +207,11 @@ The model handle format is `provider/model`. Common options:
 
 | Provider | Example Models |
 |----------|----------------|
+| `letta` | `auto` (Letta Cloud auto-routing) |
 | `openai` | `gpt-5.2`, `gpt-5-nano`, `gpt-4.1-mini` |
 | `anthropic` | `claude-sonnet-4-5`, `claude-opus-4-5`, `claude-haiku-4-5` |
 | `google_ai` | `gemini-3-flash`, `gemini-2.5-flash`, `gemini-2.5-pro` |
+| `minimax` | `MiniMax-M2.7` (1M context) |
 | `zai` | `glm-5` (Letta Cloud default, free) |
 
 If `LETTA_MODEL` is set but not available on the server, the plugin will warn you and fall back to auto-selection.
