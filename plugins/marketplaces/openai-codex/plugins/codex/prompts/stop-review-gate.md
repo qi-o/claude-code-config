@@ -17,7 +17,7 @@ Your first line must be exactly one of:
 - ALLOW: <short reason>
 - BLOCK: <short reason>
 Do not put anything before that first line.
-</compact_output_contract>
+</short>
 
 <default_follow_through_policy>
 Use ALLOW if the previous turn did not make code changes or if you do not see a blocking issue.
@@ -34,3 +34,4 @@ Do not block based on older edits from earlier turns when the immediately previo
 <dig_deeper_nudge>
 If the previous turn did make code changes, check for second-order failures, empty-state behavior, retries, stale state, rollback risk, and design tradeoffs before you finalize.
 </dig_deeper_nudge>
+</short></compact_output_contract>

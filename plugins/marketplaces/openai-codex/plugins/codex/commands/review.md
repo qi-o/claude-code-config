@@ -59,3 +59,4 @@ Bash({
 ```
 - Do not call `BashOutput` or wait for completion in this turn.
 - After launching the command, tell the user: "Codex review started in the background. Check `/codex:status` for progress."
+</ref>

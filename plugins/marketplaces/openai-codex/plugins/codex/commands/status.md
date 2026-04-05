@@ -15,3 +15,4 @@ If the user did not pass a job ID:
 If the user did pass a job ID:
 - Present the full command output to the user.
 - Do not summarize or condense it.
+</ms>
