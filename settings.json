@@ -4,6 +4,8 @@
     "commit": "",
     "pr": ""
   },
+  "autoDreamEnabled": true,
+  "autoUpdatesChannel": "latest",
   "effortLevel": "high",
   "enabledPlugins": {
     "apify-ultimate-scraper@apify-agent-skills": true,
@@ -15,43 +17,30 @@
     "typescript-lsp@claude-plugins-official": true
   },
   "env": {
-    "ANTHROPIC_AUTH_TOKEN": "YOUR_API_KEY_HERE",
-    "ANTHROPIC_BASE_URL": "https://api.minimaxi.com/anthropic",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "MiniMax-M2.7",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "MiniMax-M2.7",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "MiniMax-M2.7",
-    "ANTHROPIC_MODEL": "MiniMax-M2.7",
-    "ANTHROPIC_REASONING_MODEL": "MiniMax-M2.7",
-    "API_TIMEOUT_MS": "3000000",
-    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "ANTHROPIC_AUTH_TOKEN": "1326e435339449fd8cfcb076de16b2e2.j0Q8kpouEMOxGpce",
+    "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "GLM-5V-Turbo",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "GLM-5.1",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "GLM-5V-Turbo",
+    "ANTHROPIC_MODEL": "GLM-5.1",
+    "ANTHROPIC_REASONING_MODEL": "GLM-5.1",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "ENABLE_LSP_TOOL": "1",
-    "ENABLE_TOOL_SEARCH": "true",
-    "GETNOTE_API_KEY": "gk_live_3f263a50a9c3ba55.eb99c98b584c646f86ba997e47123da46f12dae046fb416e",
-    "GETNOTE_CLIENT_ID": "cli_3802f9db08b811f197679c63c078bacc"
+    "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_TOKEN_HERE",
+    "LETTA_API_KEY": "sk-let-MjU2ZjgxYzktMzg3MS00ZmIzLWJjZmQtMjhiNDI2M2FmOTJjOjJkYjIwM2JkLWEzMGUtNDQwNS1hNzkzLThmM2Q5ZDAyMDM1OA==",
+    "LETTA_MODE": "whisper",
+    "LETTA_SDK_TOOLS": "read-only",
+    "ZHIPU_API_KEY": "1326e435339449fd8cfcb076de16b2e2.j0Q8kpouEMOxGpce"
   },
   "extraKnownMarketplaces": {
-    "claude-subconscious": {
+    "openai-codex": {
       "source": {
-        "repo": "letta-ai/claude-subconscious",
+        "repo": "openai/codex-plugin-cc",
         "source": "github"
       }
     }
   },
-  "hooks": {
-    "PreToolUse": [
-      {
-        "hooks": [
-          {
-            "command": "node \"C:\\Users\\ZDS\\.claude\\hooks\\rtk\\rtk-hook.cjs\"",
-            "timeout": 5,
-            "type": "command"
-          }
-        ],
-        "matcher": "Bash"
-      }
-    ]
-  },
+  "includeCoAuthoredBy": false,
   "permissions": {
     "defaultMode": "auto"
   },
