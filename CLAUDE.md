@@ -1,6 +1,5 @@
 <!-- OMC:START -->
-
-<!-- OMC:VERSION:4.10.1 -->
+<!-- OMC:VERSION:4.11.2 -->
 
 # oh-my-claudecode - Intelligent Multi-Agent Orchestration
 
@@ -66,7 +65,6 @@ Say "setup omc" or run `/oh-my-claudecode:omc-setup`.
 <!-- OMC:END -->
 
 <!-- User customizations -->
-
 <!-- rtk-instructions v2 -->
 # RTK (Rust Token Killer) - Token-Optimized Commands
 
@@ -202,3 +200,6 @@ Overall average: **60-90% token reduction** on common development operations.
 <!-- /rtk-instructions -->
 
 Use the fff MCP tools for all file search or grep operations instead of default tools.
+# graphify
+- **graphify** (`~/.claude/skills/graphify/SKILL.md`) - any input to knowledge graph. Trigger: `/graphify`
+When the user types `/graphify`, invoke the Skill tool with `skill: "graphify"` before doing anything else.
