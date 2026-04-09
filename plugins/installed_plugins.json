@@ -32,10 +32,10 @@
     "oh-my-claudecode@omc": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.11.2",
-        "version": "4.11.2",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.11.4",
+        "version": "4.11.4",
         "installedAt": "2026-02-23T07:55:55.808Z",
-        "lastUpdated": "2026-04-08T05:30:07.357Z",
+        "lastUpdated": "2026-04-09T10:01:17.854Z",
         "gitCommitSha": "6baad43c0eb19e4df2193c70b1028ffd7bceb299"
       }
     ],
@@ -118,6 +118,16 @@
         "installedAt": "2026-03-31T13:05:02.278Z",
         "lastUpdated": "2026-03-31T13:05:02.278Z",
         "gitCommitSha": "8f8ab35356c4e66f445786f75b8c0e647d28be51"
+      }
+    ],
+    "andrej-karpathy-skills@karpathy-skills": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\karpathy-skills\\andrej-karpathy-skills\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-04-09T10:08:55.078Z",
+        "lastUpdated": "2026-04-09T10:08:55.078Z",
+        "gitCommitSha": "aa4467f0b33e1e80d11c7c043d4b27e7c79a73a3"
       }
     ]
   }

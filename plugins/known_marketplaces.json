@@ -29,7 +29,7 @@
       "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\omc",
-    "lastUpdated": "2026-04-08T05:29:56.212Z"
+    "lastUpdated": "2026-04-09T10:01:01.673Z"
   },
   "superpowers-marketplace": {
     "source": {
@@ -78,5 +78,13 @@
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\source-verifier-marketplace",
     "lastUpdated": "2026-03-31T13:04:49.130Z"
+  },
+  "karpathy-skills": {
+    "source": {
+      "source": "github",
+      "repo": "forrestchang/andrej-karpathy-skills"
+    },
+    "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\karpathy-skills",
+    "lastUpdated": "2026-04-09T10:08:46.529Z"
   }
 }
