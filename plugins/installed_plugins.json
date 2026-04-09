@@ -119,16 +119,6 @@
         "lastUpdated": "2026-03-31T13:05:02.278Z",
         "gitCommitSha": "8f8ab35356c4e66f445786f75b8c0e647d28be51"
       }
-    ],
-    "andrej-karpathy-skills@karpathy-skills": [
-      {
-        "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\karpathy-skills\\andrej-karpathy-skills\\1.0.0",
-        "version": "1.0.0",
-        "installedAt": "2026-04-09T10:08:55.078Z",
-        "lastUpdated": "2026-04-09T10:08:55.078Z",
-        "gitCommitSha": "aa4467f0b33e1e80d11c7c043d4b27e7c79a73a3"
-      }
     ]
   }
 }
