@@ -31,22 +31,24 @@
     ],
     "oh-my-claudecode@omc": [
       {
-        "scope": "user",
+        "scope": "project",
         "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.11.4",
         "version": "4.11.4",
         "installedAt": "2026-02-23T07:55:55.808Z",
-        "lastUpdated": "2026-04-09T10:01:17.854Z",
-        "gitCommitSha": "6baad43c0eb19e4df2193c70b1028ffd7bceb299"
+        "lastUpdated": "2026-04-10T06:36:31.079Z",
+        "gitCommitSha": "6baad43c0eb19e4df2193c70b1028ffd7bceb299",
+        "projectPath": "C:\\Users\\ZDS"
       }
     ],
     "apify-ultimate-scraper@apify-agent-skills": [
       {
-        "scope": "user",
+        "scope": "project",
         "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\apify-agent-skills\\apify-ultimate-scraper\\2.0.0",
         "version": "2.0.0",
         "installedAt": "2026-03-02T04:15:59.527Z",
-        "lastUpdated": "2026-03-30T04:05:45.703Z",
-        "gitCommitSha": "df6b198b8285a1b56347a15185e0daf5c69bef3a"
+        "lastUpdated": "2026-04-10T06:36:31.079Z",
+        "gitCommitSha": "df6b198b8285a1b56347a15185e0daf5c69bef3a",
+        "projectPath": "C:\\Users\\ZDS"
       }
     ],
     "webnovel-writer@webnovel-writer-marketplace": [
@@ -62,52 +64,57 @@
     ],
     "superpowers@superpowers-marketplace": [
       {
-        "scope": "user",
+        "scope": "project",
         "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\superpowers-marketplace\\superpowers\\5.0.6",
         "version": "5.0.6",
         "installedAt": "2026-03-10T14:27:16.316Z",
-        "lastUpdated": "2026-03-30T04:05:52.292Z",
-        "gitCommitSha": "33e55e60b2efcb69509bc233dfc128112012b2c8"
+        "lastUpdated": "2026-04-10T06:36:31.079Z",
+        "gitCommitSha": "33e55e60b2efcb69509bc233dfc128112012b2c8",
+        "projectPath": "C:\\Users\\ZDS"
       }
     ],
     "pua@pua-skills": [
       {
-        "scope": "user",
+        "scope": "project",
         "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\pua-skills\\pua\\3.1.0",
         "version": "3.1.0",
         "installedAt": "2026-03-26T09:06:03.044Z",
-        "lastUpdated": "2026-03-30T04:02:12.335Z",
-        "gitCommitSha": "7d039d0aa94cb27723e4188cd72a18c42c1732d2"
+        "lastUpdated": "2026-04-10T06:36:31.079Z",
+        "gitCommitSha": "7d039d0aa94cb27723e4188cd72a18c42c1732d2",
+        "projectPath": "C:\\Users\\ZDS"
       }
     ],
     "claude-subconscious@claude-subconscious": [
       {
-        "scope": "user",
+        "scope": "project",
         "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\claude-subconscious\\claude-subconscious\\2.1.1",
         "version": "2.1.1",
         "installedAt": "2026-03-26T08:46:13.996Z",
-        "lastUpdated": "2026-04-04T07:15:59.417Z",
-        "gitCommitSha": "9d5a7e9c274f429f7657b58c9b1a9cb2e56cd0b3"
+        "lastUpdated": "2026-04-10T06:36:31.079Z",
+        "gitCommitSha": "9d5a7e9c274f429f7657b58c9b1a9cb2e56cd0b3",
+        "projectPath": "C:\\Users\\ZDS"
       }
     ],
     "typescript-lsp@claude-plugins-official": [
       {
-        "scope": "user",
+        "scope": "project",
         "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\claude-plugins-official\\typescript-lsp\\1.0.0",
         "version": "1.0.0",
         "installedAt": "2026-03-29T08:03:16.008Z",
-        "lastUpdated": "2026-03-29T08:03:16.008Z",
-        "gitCommitSha": "d53f6ca4cdb000c671dfdc1c181b021e97c25505"
+        "lastUpdated": "2026-04-10T06:36:31.079Z",
+        "gitCommitSha": "d53f6ca4cdb000c671dfdc1c181b021e97c25505",
+        "projectPath": "C:\\Users\\ZDS"
       }
     ],
     "codex@openai-codex": [
       {
-        "scope": "user",
+        "scope": "project",
         "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\openai-codex\\codex\\1.0.1",
         "version": "1.0.1",
         "installedAt": "2026-03-31T03:09:57.212Z",
-        "lastUpdated": "2026-03-31T03:09:57.212Z",
-        "gitCommitSha": "9cb4fe4099195b2587c402117a3efce6ab5aac78"
+        "lastUpdated": "2026-04-10T06:36:31.079Z",
+        "gitCommitSha": "9cb4fe4099195b2587c402117a3efce6ab5aac78",
+        "projectPath": "C:\\Users\\ZDS"
       }
     ],
     "source-verifier@source-verifier-marketplace": [
@@ -118,6 +125,17 @@
         "installedAt": "2026-03-31T13:05:02.278Z",
         "lastUpdated": "2026-03-31T13:05:02.278Z",
         "gitCommitSha": "8f8ab35356c4e66f445786f75b8c0e647d28be51"
+      }
+    ],
+    "andrej-karpathy-skills@karpathy-skills": [
+      {
+        "scope": "project",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\karpathy-skills\\andrej-karpathy-skills\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-04-10T06:36:31.079Z",
+        "lastUpdated": "2026-04-10T06:36:31.079Z",
+        "gitCommitSha": "aa4467f0b33e1e80d11c7c043d4b27e7c79a73a3",
+        "projectPath": "C:\\Users\\ZDS"
       }
     ]
   }
