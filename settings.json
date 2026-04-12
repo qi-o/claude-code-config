@@ -42,14 +42,14 @@
       }
     }
   },
-  "includeCoAuthoredBy": false,
+  "statusLine": {
+    "command": "node C:/Users/ZDS/.claude/hud/omc-hud.mjs",
+    "type": "command"
+  },
   "permissions": {
     "defaultMode": "auto"
   },
   "skipAutoPermissionPrompt": true,
   "skipDangerousModePermissionPrompt": true,
-  "statusLine": {
-    "command": "node C:/Users/ZDS/.claude/hud/omc-hud.mjs",
-    "type": "command"
-  }
+  "includeCoAuthoredBy": false
 }
