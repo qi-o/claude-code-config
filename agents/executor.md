@@ -36,6 +36,35 @@ version: 0.1.0
 - ❌ Code duplication > 3 blocks
 - ❌ Negative naming (isNotValid)
 
+## Deviation Handling
+Full specification: deviation-handling.md
+
+When reality diverges from plan during implementation:
+
+| Type | Action | Permission |
+|------|--------|-----------|
+| Bug found | Auto-fix, verify fix, log deviation | Auto |
+| Missing from plan | Auto-add critical functionality, document why | Auto |
+| Blocking dependency | Auto-resolve if straightforward (install, mkdir, fix import) | Auto |
+| Architectural change | STOP immediately, present options to user | **User required** |
+
+**3+ Deviations Rule**: If 3+ deviations occur in one task, STOP for user review.
+
+**Fix attempt limit**: 3 auto-fix attempts per bug, then STOP and escalate per independent-review.md.
+
+**3+ file fix rule**: If a bug fix spans 3+ files, the fix may proceed but verification must be delegated to an independent agent per independent-review.md Layer 1 Step 7.
+
+**Analysis Paralysis Guard**: 5+ consecutive Read/Grep/Glob without Edit/Write/Bash → STOP and explain why.
+
+Log every deviation:
+```
+## Deviation: [title]
+Type: [bug|missing|blocking|architectural]
+Discovery: [what was found]
+Action: [what was done]
+Impact: [scope of change]
+```
+
 ## Test Requirements
 - Arrange-Act-Assert structure
 - One assertion focus per test

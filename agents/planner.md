@@ -52,6 +52,20 @@ version: 0.1.0
 
 ### Dependencies
 - [External dependencies]
+
+### Must-Haves (required for 3+ step plans)
+
+```
+## Must-Haves
+### Truths (invariants that must hold when complete)
+- [truth 1]
+
+### Artifacts (files that must exist with substance)
+- [path]: [what it must contain]
+
+### Key Links (connections that must be wired)
+- [source] -> [target]: [connection type]
+```
 ```
 
 ## Principles
