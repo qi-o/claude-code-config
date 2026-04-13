@@ -4,8 +4,6 @@
     "commit": "",
     "pr": ""
   },
-  "autoDreamEnabled": true,
-  "autoUpdatesChannel": "latest",
   "effortLevel": "high",
   "enabledPlugins": {
     "apify-ultimate-scraper@apify-agent-skills": true,
@@ -13,19 +11,21 @@
     "codex@openai-codex": true,
     "oh-my-claudecode@omc": true,
     "pua@pua-skills": true,
+    "source-verifier@source-verifier-marketplace": true,
     "superpowers@superpowers-marketplace": true,
     "typescript-lsp@claude-plugins-official": true
   },
   "env": {
-    "ANTHROPIC_AUTH_TOKEN": "1326e435339449fd8cfcb076de16b2e2.j0Q8kpouEMOxGpce",
-    "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "GLM-5-Turbo",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "GLM-5.1",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "GLM-5-Turbo",
-    "ANTHROPIC_MODEL": "GLM-5.1",
-    "ANTHROPIC_REASONING_MODEL": "GLM-5.1",
+    "ANTHROPIC_AUTH_TOKEN": "YOUR_API_KEY_HERE",
+    "ANTHROPIC_BASE_URL": "https://www.packyapi.com",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku-4-5-20251001",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-6",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-6",
+    "ANTHROPIC_MODEL": "claude-opus-4-6",
+    "ANTHROPIC_REASONING_MODEL": "claude-opus-4-6",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "ENABLE_LSP_TOOL": "1",
+    "ENABLE_TOOL_SEARCH": "true",
     "GETNOTE_API_KEY": "gk_live_3f263a50a9c3ba55.eb99c98b584c646f86ba997e47123da46f12dae046fb416e",
     "GETNOTE_CLIENT_ID": "cli_3802f9db08b811f197679c63c078bacc",
     "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_TOKEN_HERE",
@@ -35,21 +35,26 @@
     "ZHIPU_API_KEY": "1326e435339449fd8cfcb076de16b2e2.j0Q8kpouEMOxGpce"
   },
   "extraKnownMarketplaces": {
-    "openai-codex": {
+    "pua-skills": {
       "source": {
-        "repo": "openai/codex-plugin-cc",
+        "repo": "tanweai/pua",
+        "source": "github"
+      }
+    },
+    "source-verifier-marketplace": {
+      "source": {
+        "repo": "Luxuzhou/source-verifier-skill",
         "source": "github"
       }
     }
-  },
-  "statusLine": {
-    "command": "node C:/Users/ZDS/.claude/hud/omc-hud.mjs",
-    "type": "command"
   },
   "permissions": {
     "defaultMode": "auto"
   },
   "skipAutoPermissionPrompt": true,
   "skipDangerousModePermissionPrompt": true,
-  "includeCoAuthoredBy": false
+  "statusLine": {
+    "command": "node C:/Users/ZDS/.claude/hud/omc-hud.mjs",
+    "type": "command"
+  }
 }
