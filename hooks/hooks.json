@@ -2,11 +2,58 @@
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": {
-          "tool": "Bash",
-          "command": "git push"
-        },
-        "command": "node -e \"console.log('\\n⚠️  Git Push 提醒：请确认已完成代码审查和测试\\n')\""
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [{
+          "type": "command",
+          "command": "node \"C:\\Users\\ZDS\\.claude\\hooks\\gateguard.cjs\"",
+          "timeout": 5000,
+          "id": "pre:gateguard-edit"
+        }],
+        "description": "Fact-forcing gate: block first edit per file, demand investigation"
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [{
+          "type": "command",
+          "command": "node \"C:\\Users\\ZDS\\.claude\\hooks\\gateguard.cjs\"",
+          "timeout": 5000,
+          "id": "pre:gateguard-bash"
+        }],
+        "description": "Fact-forcing gate for destructive bash + git push warning"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [{
+          "type": "command",
+          "command": "node \"C:\\Users\\ZDS\\.claude\\hooks\\format-accumulator.cjs\"",
+          "timeout": 3000,
+          "id": "post:format-accumulator"
+        }],
+        "description": "Accumulate edited file paths for batch formatting at Stop"
+      },
+      {
+        "matcher": "Edit",
+        "hooks": [{
+          "type": "command",
+          "command": "node \"C:\\Users\\ZDS\\.claude\\hooks\\debug-detect.cjs\"",
+          "timeout": 3000,
+          "id": "post:debug-detect"
+        }],
+        "description": "Warn about debug statements (console.log / print()) after edits"
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [{
+          "type": "command",
+          "command": "node \"C:\\Users\\ZDS\\.claude\\hooks\\format-batch.cjs\"",
+          "timeout": 120000,
+          "id": "stop:format-batch"
+        }],
+        "description": "Batch format Python (Black) and JS/TS (Prettier) files"
       }
     ]
   }
