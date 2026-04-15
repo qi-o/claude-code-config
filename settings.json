@@ -51,5 +51,19 @@
   },
   "skipAutoPermissionPrompt": true,
   "skipDangerousModePermissionPrompt": true,
-  "includeCoAuthoredBy": false
+  "includeCoAuthoredBy": false,
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:/Users/ZDS/.claude/hooks/gsd-prompt-guard.js\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
 }
