@@ -1,21 +1,4 @@
 {
-  "alwaysThinkingEnabled": true,
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  },
-  "autoDreamEnabled": true,
-  "autoUpdatesChannel": "latest",
-  "effortLevel": "high",
-  "enabledPlugins": {
-    "apify-ultimate-scraper@apify-agent-skills": true,
-    "claude-subconscious@claude-subconscious": true,
-    "codex@openai-codex": true,
-    "oh-my-claudecode@omc": true,
-    "pua@pua-skills": true,
-    "superpowers@superpowers-marketplace": true,
-    "typescript-lsp@claude-plugins-official": true
-  },
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "1326e435339449fd8cfcb076de16b2e2.j0Q8kpouEMOxGpce",
     "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
@@ -32,26 +15,17 @@
     "LETTA_API_KEY": "sk-let-MjU2ZjgxYzktMzg3MS00ZmIzLWJjZmQtMjhiNDI2M2FmOTJjOjJkYjIwM2JkLWEzMGUtNDQwNS1hNzkzLThmM2Q5ZDAyMDM1OA==",
     "LETTA_MODE": "whisper",
     "LETTA_SDK_TOOLS": "read-only",
+    "MINIMAX_API_KEY": "YOUR_API_KEY_HERE",
     "ZHIPU_API_KEY": "1326e435339449fd8cfcb076de16b2e2.j0Q8kpouEMOxGpce"
   },
-  "extraKnownMarketplaces": {
-    "openai-codex": {
-      "source": {
-        "repo": "openai/codex-plugin-cc",
-        "source": "github"
-      }
-    }
+  "attribution": {
+    "commit": "",
+    "pr": ""
   },
-  "statusLine": {
-    "command": "node C:/Users/ZDS/.claude/hud/omc-hud.mjs",
-    "type": "command"
-  },
+  "includeCoAuthoredBy": false,
   "permissions": {
     "defaultMode": "auto"
   },
-  "skipAutoPermissionPrompt": true,
-  "skipDangerousModePermissionPrompt": true,
-  "includeCoAuthoredBy": false,
   "hooks": {
     "PreToolUse": [
       {
@@ -65,5 +39,32 @@
         ]
       }
     ]
-  }
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "node C:/Users/ZDS/.claude/hud/omc-hud.mjs"
+  },
+  "enabledPlugins": {
+    "apify-ultimate-scraper@apify-agent-skills": true,
+    "claude-subconscious@claude-subconscious": true,
+    "codex@openai-codex": true,
+    "oh-my-claudecode@omc": true,
+    "pua@pua-skills": true,
+    "superpowers@superpowers-marketplace": true,
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    }
+  },
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "xhigh",
+  "autoUpdatesChannel": "latest",
+  "autoDreamEnabled": true,
+  "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true
 }
