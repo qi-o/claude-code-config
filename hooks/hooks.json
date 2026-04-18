@@ -42,6 +42,16 @@
           "id": "post:debug-detect"
         }],
         "description": "Warn about debug statements (console.log / print()) after edits"
+      },
+      {
+        "matcher": "Read",
+        "hooks": [{
+          "type": "command",
+          "command": "node \"C:\\Users\\ZDS\\.claude\\hooks\\read-injection-scanner.cjs\"",
+          "timeout": 5000,
+          "id": "post:read-injection-scanner"
+        }],
+        "description": "Scan Read tool output for prompt injection, summarization-survival, invisible Unicode"
       }
     ],
     "Stop": [

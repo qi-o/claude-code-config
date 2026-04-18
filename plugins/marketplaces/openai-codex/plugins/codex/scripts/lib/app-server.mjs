@@ -13,7 +13,8 @@ import process from "node:process";
 import { spawn } from "node:child_process";
 import readline from "node:readline";
 import { parseBrokerEndpoint } from "./broker-endpoint.mjs";
-import { ensureBrokerSession } from "./broker-lifecycle.mjs";
+import { ensureBrokerSession, loadBrokerSession } from "./broker-lifecycle.mjs";
+import { terminateProcessTree } from "./process.mjs";
 
 const PLUGIN_MANIFEST_URL = new URL("../../.claude-plugin/plugin.json", import.meta.url);
 const PLUGIN_MANIFEST = JSON.parse(fs.readFileSync(PLUGIN_MANIFEST_URL, "utf8"));
@@ -187,9 +188,10 @@ class SpawnedCodexAppServerClient extends AppServerClientBase {
   async initialize() {
     this.proc = spawn("codex", ["app-server"], {
       cwd: this.cwd,
-      env: this.options.env,
-      shell: process.platform === "win32",
-      stdio: ["pipe", "pipe", "pipe"]
+      env: this.options.env ?? process.env,
+      stdio: ["pipe", "pipe", "pipe"],
+      shell: process.platform === "win32" ? (process.env.SHELL || true) : false,
+      windowsHide: true
     });
 
     this.proc.stdout.setEncoding("utf8");
@@ -238,8 +240,20 @@ class SpawnedCodexAppServerClient extends AppServerClientBase {
     if (this.proc && !this.proc.killed) {
       this.proc.stdin.end();
       setTimeout(() => {
-        if (this.proc && !this.proc.killed) {
-          this.proc.kill("SIGTERM");
+        if (this.proc && !this.proc.killed && this.proc.exitCode === null) {
+          // On Windows with shell: true, the direct child is cmd.exe.
+          // Use terminateProcessTree to kill the entire tree including
+          // the grandchild node process.
+          if (process.platform === "win32") {
+            try {
+              terminateProcessTree(this.proc.pid);
+            } catch {
+              // Best-effort cleanup inside an unref'd timer — swallow errors
+              // to avoid crashing the host process during shutdown.
+            }
+          } else {
+            this.proc.kill("SIGTERM");
+          }
         }
       }, 50).unref?.();
     }
@@ -319,7 +333,10 @@ export class CodexAppServerClient {
     let brokerEndpoint = null;
     if (!options.disableBroker) {
       brokerEndpoint = options.brokerEndpoint ?? options.env?.[BROKER_ENDPOINT_ENV] ?? process.env[BROKER_ENDPOINT_ENV] ?? null;
-      if (!brokerEndpoint) {
+      if (!brokerEndpoint && options.reuseExistingBroker) {
+        brokerEndpoint = loadBrokerSession(cwd)?.endpoint ?? null;
+      }
+      if (!brokerEndpoint && !options.reuseExistingBroker) {
         const brokerSession = await ensureBrokerSession(cwd, { env: options.env });
         brokerEndpoint = brokerSession?.endpoint ?? null;
       }

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "config": {
+    "stopReviewGate": false
+  },
+  "jobs": [
+    {
+      "createdAt": "2026-04-18T03:06:09.232Z",
+      "updatedAt": "2026-04-18T03:06:14.769Z",
+      "id": "review-mo3r9bkg-nqoaue",
+      "kind": "review",
+      "kindLabel": "review",
+      "title": "Codex Review",
+      "workspaceRoot": "C:/Users/ZDS/.claude",
+      "jobClass": "review",
+      "summary": "Review working tree diff",
+      "write": false,
+      "sessionId": "5b9f3922-2589-4e19-926d-c84558f62659",
+      "status": "failed",
+      "startedAt": "2026-04-18T03:06:09.413Z",
+      "phase": "failed",
+      "pid": null,
+      "logFile": "C:\\Users\\ZDS\\.claude\\plugins\\data\\codex-openai-codex\\state\\.claude-8e45964baba80864\\jobs\\review-mo3r9bkg-nqoaue.log",
+      "errorMessage": "spawn codex ENOENT",
+      "completedAt": "2026-04-18T03:06:14.407Z"
+    }
+  ]
+}
