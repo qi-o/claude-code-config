@@ -137,6 +137,15 @@
         "lastUpdated": "2026-04-10T06:36:31.079Z",
         "gitCommitSha": "aa4467f0b33e1e80d11c7c043d4b27e7c79a73a3"
       }
+    ],
+    "claude-mem@thedotmack": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\thedotmack\\claude-mem\\12.2.0",
+        "version": "12.2.0",
+        "installedAt": "2026-04-18T04:02:22.451Z",
+        "lastUpdated": "2026-04-18T04:02:22.451Z"
+      }
     ]
   }
 }
