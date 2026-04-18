@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "config": {
+    "stopReviewGate": false
+  },
+  "jobs": [
+    {
+      "createdAt": "2026-04-18T08:28:11.518Z",
+      "updatedAt": "2026-04-18T08:28:56.425Z",
+      "id": "task-mo42rgqm-9v45mp",
+      "kind": "task",
+      "kindLabel": "rescue",
+      "title": "Codex Task",
+      "workspaceRoot": "C:/Users/ZDS",
+      "jobClass": "task",
+      "summary": "<task> Investigate why stop hooks keep appearing frequently in this Claude Code session with ...",
+      "write": true,
+      "sessionId": "1b190c4c-fef9-423b-bfa7-165b996f3a2a",
+      "status": "running",
+      "startedAt": "2026-04-18T08:28:11.855Z",
+      "phase": "verifying",
+      "pid": 31324,
+      "logFile": "C:\\Users\\ZDS\\.claude\\plugins\\data\\codex-openai-codex\\state\\ZDS-85f263b136da5222\\jobs\\task-mo42rgqm-9v45mp.log",
+      "threadId": "019d9fb4-818a-7912-bef5-af0270976869",
+      "turnId": "019d9fb4-8a47-7901-bb7c-af42c6131207"
+    }
+  ]
+}

@@ -5,7 +5,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\claude-plugins-official",
-    "lastUpdated": "2026-04-18T03:29:41.315Z"
+    "lastUpdated": "2026-04-18T08:40:50.853Z"
   },
   "dev-browser-marketplace": {
     "source": {
@@ -93,7 +93,7 @@
       "repo": "thedotmack/claude-mem"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\thedotmack",
-    "lastUpdated": "2026-04-18T04:02:22.440Z",
+    "lastUpdated": "2026-04-18T08:40:50.154Z",
     "autoUpdate": true
   }
 }
