@@ -5,7 +5,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\claude-plugins-official",
-    "lastUpdated": "2026-04-19T05:43:57.999Z"
+    "lastUpdated": "2026-04-19T09:20:11.202Z"
   },
   "dev-browser-marketplace": {
     "source": {
@@ -29,7 +29,7 @@
       "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\omc",
-    "lastUpdated": "2026-04-18T10:35:17.947Z"
+    "lastUpdated": "2026-04-19T09:14:41.911Z"
   },
   "superpowers-marketplace": {
     "source": {
@@ -93,7 +93,7 @@
       "repo": "thedotmack/claude-mem"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\thedotmack",
-    "lastUpdated": "2026-04-19T05:44:08.866Z",
+    "lastUpdated": "2026-04-19T09:20:32.156Z",
     "autoUpdate": true
   }
 }
