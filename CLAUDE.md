@@ -1,5 +1,5 @@
 <!-- OMC:START -->
-<!-- OMC:VERSION:4.13.0 -->
+<!-- OMC:VERSION:4.13.1 -->
 
 # oh-my-claudecode - Intelligent Multi-Agent Orchestration
 
@@ -13,15 +13,9 @@ Coordinate specialized agents, tools, and skills so work is completed accurately
 - Consult official docs before implementing with SDKs/frameworks/APIs.
 </operating_principles>
 
-<references>
-Shared reference blocks at `~/.claude/references/` reduce per-agent context footprint.
-Agents SHOULD reference these blocks via `Read` when performing initialization sequences, rather than duplicating content inline.
-</references>
-
 <delegation_rules>
 Delegate for: multi-file changes, refactors, debugging, reviews, planning, research, verification.
-Work directly for: trivial ops, small clarifications, single commands, single-file changes without review requirement.
-Delegate to subagent when: targets 2+ files OR requires independent review per independent-review.md.
+Work directly for: trivial ops, small clarifications, single commands.
 Route code to `executor` (use `model=opus` for complex work). Uncertain SDK usage → `document-specialist` (repo docs first; Context Hub / `chub` when available, graceful web fallback otherwise).
 </delegation_rules>
 

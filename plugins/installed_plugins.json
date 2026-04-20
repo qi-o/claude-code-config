@@ -33,10 +33,10 @@
       {
         "scope": "project",
         "projectPath": "C:\\Users\\ZDS",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.13.0",
-        "version": "4.13.0",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\omc\\oh-my-claudecode\\4.13.1",
+        "version": "4.13.1",
         "installedAt": "2026-02-23T07:55:55.808Z",
-        "lastUpdated": "2026-04-19T09:15:03.135Z",
+        "lastUpdated": "2026-04-20T15:42:51.556Z",
         "gitCommitSha": "6baad43c0eb19e4df2193c70b1028ffd7bceb299"
       }
     ],

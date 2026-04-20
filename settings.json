@@ -26,20 +26,6 @@
   "permissions": {
     "defaultMode": "auto"
   },
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Write|Edit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node \"C:/Users/ZDS/.claude/hooks/gsd-prompt-guard.js\"",
-            "timeout": 5
-          }
-        ]
-      }
-    ]
-  },
   "statusLine": {
     "type": "command",
     "command": "node C:/Users/ZDS/.claude/hud/omc-hud.mjs"
@@ -69,7 +55,7 @@
     }
   },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "max",
+  "effortLevel": "high",
   "autoUpdatesChannel": "latest",
   "tui": "fullscreen",
   "autoDreamEnabled": true,
