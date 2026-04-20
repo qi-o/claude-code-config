@@ -108,16 +108,23 @@
 
 ## 触发矩阵
 
-| 任务类型 | 触发层级 | 独立 Agent |
-|---------|---------|-----------|
-| 系统故障排查 | 第一层（含调试框架） | `debugger` (sonnet) |
-| 复杂修复计划（3+ 文件） | 第二层 | `verifier` (sonnet) |
-| 架构/设计决策 | 设计工作流 | `architect` (opus) |
-| 新功能/项目启动 | 设计工作流 | `planner` (opus) |
-| Skill 规则修改 | 第三层 | `quality-reviewer` (sonnet) |
-| 发现可归因错误 | 第四层（冰山协议） | `verifier` (sonnet) |
-| 严肃写作产出 | 见 writing-quality.md | `quality-reviewer` + `verifier` |
-| 单文件小改动 | 无需独立审查 | — |
+### Gate 类型定义（from GSD v1.34）
+
+- **Pre-flight**: 任务开始前验证前提条件 → 失败则阻止启动
+- **Revision**: 产出物交付前验证质量 → 失败则返回修改（最多 2 轮）
+- **Escalation**: 遇到阻塞时上报用户决策 → 等待确认
+- **Abort**: 严重错误时终止 → 保存状态，通知用户
+
+| 任务类型 | 触发层级 | Gate 类型 | 独立 Agent |
+|---------|---------|----------|-----------|
+| 系统故障排查 | 第一层（含调试框架） | Revision | `debugger` (sonnet) |
+| 复杂修复计划（3+ 文件） | 第二层 | Revision | `verifier` (sonnet) |
+| 架构/设计决策 | 设计工作流 | Escalation | `architect` (opus) |
+| 新功能/项目启动 | 设计工作流 | Pre-flight | `planner` (opus) |
+| Skill 规则修改 | 第三层 | Revision | `quality-reviewer` (sonnet) |
+| 发现可归因错误 | 第四层（冰山协议） | Revision→Abort | `verifier` (sonnet) |
+| 严肃写作产出 | 见 writing-quality.md | Revision | `quality-reviewer` + `verifier` |
+| 单文件小改动 | 无需独立审查 | — | — |
 
 ---
 

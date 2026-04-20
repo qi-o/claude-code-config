@@ -59,6 +59,27 @@ IF must_haves from different sources contradict → escalate to user, do NOT res
 ELSE → task complete
 ```
 
+### Phase/Milestone Gate (from GSD v1.36)
+
+When completing a phase or milestone (not just a single task):
+
+**Pre-close Audit** — before marking any phase complete, run:
+1. List all artifacts the phase was supposed to produce
+2. For each artifact, verify minimum Level 3 (Wired) per artifact-verification.md
+3. Trace all key_links end-to-end (source → destination → response)
+4. Confirm no pending must_haves from the phase's plan
+
+**Gate Decision**:
+- ALL artifacts at Level 3+ AND all key_links wired → PASS, phase may close
+- ANY artifact below Level 3 OR any key_link broken → FAIL, phase NOT complete
+- UNKNOWN artifacts (cannot verify) → delegate to verifier agent before closing
+
+This gate is MANDATORY for:
+- `ultrawork` session completion
+- `ralph` wave completion
+- Any `plan` skill's final step
+- Multi-phase project milestones
+
 ## Priority Hierarchy
 
 When multiple sources define verification criteria, the most specific wins:

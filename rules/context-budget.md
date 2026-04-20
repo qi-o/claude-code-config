@@ -65,6 +65,20 @@ When approaching DEGRADING tier (>50%):
 3. **Checkpoint workflow state** via `state_write` if in ralph/ultrawork/autopilot
 4. **Delegate remaining work** to fresh subagent if possible (they get full context)
 
+## Auto-Recording Triggers (from GSD v1.36)
+
+以下条件任一满足时，MUST 立即执行 Proactive State Preservation Protocol：
+- 主 Agent 连续 3 次工具调用未产生有意义的输出（空读、重复读）
+- 收到 compaction 前的系统警告（如有）
+- 单次工具调用返回内容超过预期大小的 3 倍（可能触发后续 compaction）
+- DEGRADING 层持续时间超过 5 轮工具调用
+
+执行顺序：
+1. `notepad_write_priority` — 当前任务进度 + 未完成 must_haves
+2. `state_write` — ultrawork/ralph/autopilot 状态（如适用）
+3. `project_memory_add_note` — 本次会话关键发现
+4. 通知用户："Critical state auto-saved. Context pressure detected."
+
 ## Rules
 
 - **DO NOT** wait until POOR to save critical state — proactive saves at GOOD

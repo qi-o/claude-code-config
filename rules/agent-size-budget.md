@@ -20,12 +20,18 @@
 2. `SKILL.md`（含 workflow + hooks） → L
 3. `rules/*.md` / 单一职责 skill → Default
 4. `scripts/` 下的辅助说明 → Micro
+5. `references/*.md` → Micro
 
 ## 超标处理
 
 - 写入前检查行数
 - 超标时拆分为：主文件 + references/*.md
 - 拆分后主文件 ≤ 目标层级的 80%
+
+## References Exemption
+
+`~/.claude/references/` 下的文件不计入引用方的行数预算。
+References 文件自身遵循 Micro 层限制（≤200 行）。
 
 ## 与 context-budget.md 的关系
 

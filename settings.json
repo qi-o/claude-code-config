@@ -22,7 +22,7 @@
     "commit": "",
     "pr": ""
   },
-  "includeCoAuthoredBy": false,
+  "skipAutoPermissionPrompt": true,
   "permissions": {
     "defaultMode": "auto"
   },
@@ -74,5 +74,5 @@
   "tui": "fullscreen",
   "autoDreamEnabled": true,
   "skipDangerousModePermissionPrompt": true,
-  "skipAutoPermissionPrompt": true
+  "includeCoAuthoredBy": false
 }
