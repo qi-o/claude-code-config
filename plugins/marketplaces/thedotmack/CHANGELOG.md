@@ -4,6 +4,202 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [12.3.8] - 2026-04-21
+
+## 🔧 Fix
+
+**Detect PID reuse in the worker start-guard so containers can restart cleanly.** (#2082)
+
+The `kill(pid, 0)` liveness check false-positived when the worker's PID file outlived its PID namespace — most commonly after `docker stop` / `docker start` with a bind-mounted `~/.claude-mem`. The new worker would boot as the same low PID (often 11) as the old one, `kill(0)` would report "alive," and the worker would refuse to start *against its own prior incarnation*. Symptom: container appeared to start, immediately exited cleanly with no user-visible error, worker never came up.
+
+### What changed
+
+- Capture an opaque **process-start identity token** alongside the PID and verify identity, not just liveness:
+  - **Linux**: `/proc/<pid>/stat` field 22 (starttime in jiffies) — cheap, no exec, same signal `pgrep`/`systemd` use.
+  - **macOS / POSIX**: `ps -p <pid> -o lstart=` with `LC_ALL=C` pinned so the emitted timestamp is locale-independent across environments.
+  - **Windows**: unchanged — falls back to liveness-only. The PID-reuse scenario doesn't affect Windows deployments the way containers do.
+- `verifyPidFileOwnership` emits a DEBUG log when liveness passes but the token mismatches, so the "PID reused" case is distinguishable from "process dead" in production logs.
+- PID files written by older versions are token-less; `verifyPidFileOwnership` falls back to the existing liveness-only behavior for backwards compatibility. **No migration required.**
+
+### Surface
+
+Shared helpers (`PidInfo`, `captureProcessStartToken`, `verifyPidFileOwnership`) live in `src/supervisor/process-registry.ts` and are re-exported from `ProcessManager.ts` to preserve the existing public surface. Both entry points updated: `worker-service.ts` GUARD 1 and `supervisor/index.ts` `validateWorkerPidFile`.
+
+### Tests
+
++14 new tests covering token capture, ownership verification, backwards compatibility for tokenless PID files, and the container-restart regression scenario. Zero regressions.
+
+## [12.3.7] - 2026-04-20
+
+## What's Changed
+
+**Refactor: remove bearer auth and platform_source context filter** (#2081)
+
+- Drop bearer-token auth from the worker API. Worker binds localhost-only and CORS restricts origins to localhost — the token added friction for every internal client (hooks, CLI, viewer, sync script) with no real security benefit for single-user local deployments.
+- Drop the unused `platform_source` query-time filter from the `/api/context/inject` pipeline (ContextBuilder, ObservationCompiler, SearchRoutes, context handler, transcripts processor). The DB column stays — only the WHERE-clause filter and its plumbing are removed.
+- Replace the removed auth with a simple in-memory rate limiter (300 req/min) as a lightweight compensating control. Limiter normalises IPv4-mapped IPv6, emits `Retry-After` on 429, and has a size-guarded prune that never runs on localhost.
+
+## Cleanup
+
+- Deleted `src/shared/auth-token.ts` and all its dependents (`worker-utils.ts` Authorization header, `ViewerRoutes.ts` token injection, CORS `allowedHeaders: ['Authorization']`, `sync-marketplace.cjs` admin restart header).
+- Stopped tracking `.docker-blowout-data/claude-mem.db` and added the directory to `.gitignore`.
+
+## Full Changelog
+https://github.com/thedotmack/claude-mem/compare/v12.3.6...v12.3.7
+
+## [12.3.6] - 2026-04-20
+
+## Viewer fix: drop the rate limiter
+
+v12.3.5 kept the 300 req/min rate limiter from v12.3.3's "security hardening" bundle. That tripped the live viewer within seconds (it polls logs and stats) and served it "Rate limit exceeded" errors.
+
+**Fix**: remove the rate limiter entirely. The worker is localhost-only (enforced via CORS), so there's no abuse surface to protect. Rate-limiting a single-user local process is security theater.
+
+### Still kept from v12.3.3 hardening
+- 5 MB JSON body limit
+- Path traversal protection
+- Localhost-only CORS
+- Everything else from v12.3.5
+
+No upgrade action required.
+
+## [12.3.5] - 2026-04-20
+
+## Restored v12.3.3 fixes minus bearer auth
+
+v12.3.3 shipped 25 bug fixes under "Issue Blowout 2026" but also introduced bearer-token auth that broke SessionStart context injection for everyone. v12.3.4 rolled everything back to v12.3.2 to unblock users.
+
+**v12.3.5 restores all 25 fixes**, with the bearer-auth mechanism surgically removed.
+
+### Kept hardening from v12.3.3
+- 5 MB JSON body limit
+- In-memory rate limiter (300 req/min/IP)
+- Path traversal protection on `watch.context.path`
+- `RestartGuard` (time-windowed restart counter)
+- Idle session eviction on pool slot allocation
+- WAL checkpoint + `journal_size_limit`
+- Periodic `clearFailed()` for pending_messages
+- FTS5 keyword-search fallback when ChromaDB is unavailable
+- `ResponseProcessor` marks non-XML responses as failed (with retry) instead of confirming
+- `/health` reports `activeSessions`
+- Summarize hook wraps `workerHttpRequest` in try/catch (no more blocking exit code 2)
+- UserPromptSubmit session-init waits for worker health on Linux/WSL
+- MCP loopback self-check uses `process.execPath` instead of bare `node`
+- Nounset-safe `TTY_ARGS` in `docker/claude-mem/run.sh`
+
+### Removed from v12.3.3
+- `src/shared/auth-token.ts` (deleted)
+- `requireAuth` middleware and its wiring in `Server.ts`/`Middleware.ts`
+- `Authorization: Bearer` injection in `worker-utils.ts` (hook client), `ViewerRoutes.ts` (browser token injection), viewer `authFetch`, and the OpenCode plugin
+
+### Upgrade notes
+- `~/.claude-mem/worker-auth-token` from a previous 12.3.3 install is harmless and can be deleted.
+- If your Claude Code session kept the 12.3.3 daemon alive, restart Claude Code once so the fresh 12.3.5 daemon takes over.
+
+## [12.3.4] - 2026-04-20
+
+## Rollback of v12.3.3
+
+v12.3.3 (Issue Blowout 2026, PR #2080) broke SessionStart context injection — new sessions received no memory context from claude-mem. This release reverts to the v12.3.2 tree state while the regression is investigated.
+
+### Reverted
+- #2080 — Issue Blowout 2026 (25 bugs across worker, hooks, security, and search)
+
+### Notes
+No functional changes from v12.3.2. A follow-up release will re-land the v12.3.3 fixes individually once the context regression is identified and resolved.
+
+## [12.3.3] - 2026-04-20
+
+## Issue Blowout 2026 — 25 bugs across worker, hooks, security, and search
+
+### Security Hardening
+- Bearer token authentication for all worker API endpoints with auto-generated tokens
+- Path traversal protection on context write paths
+- Per-user worker port derivation (37700 + uid%100) to prevent cross-user data leakage
+- Rate limiting (300 req/min/IP) and reduced JSON body limit (50MB → 5MB)
+- Caller headers can no longer override the bearer auth token
+
+### Worker Stability
+- Time-windowed RestartGuard replaces flat counter — prevents stranding pending messages on long sessions
+- Idle session eviction prevents pool slot deadlock when all slots are full
+- MCP loopback self-check uses process.execPath instead of bare 'node'
+- Age-scoped failed message purge (1h retention) instead of clearing all
+- RestartGuard decay anchored to real successes, not object creation time
+
+### Search & Chroma
+- FTS5 keyword fallback when ChromaDB is unavailable for all search handlers
+- doc_type:'observation' filter on Chroma queries feeding observation hydration
+- Project filtering passed to Chroma queries and SQLite hydration in all endpoints
+- Bounded post-import Chroma sync with concurrency limit of 8
+- FTS5 MATCH input escaped as quoted literal phrases to prevent syntax errors
+- LIKE metacharacters escaped in prompt text search
+- date_desc ordering respected in FTS session search
+
+### Hooks Reliability
+- Summarize hook wrapped in try/catch to prevent exit code 2 on network failures
+- Session-init gated on health check success — no longer runs when worker unreachable
+- Health-check wait loop added to UserPromptSubmit for Linux/WSL startup race
+
+### Database & Performance
+- Periodic WAL checkpoint and journal_size_limit to prevent unbounded WAL growth
+- FTS5 availability cached at construction time (no DDL probe per query)
+- _fts5Available downgraded when FTS table creation fails
+
+### Viewer UI
+- response.ok check added to settings save and initial load flows
+- Auth failure handling in saveSettings
+
+## [12.3.2] - 2026-04-20
+
+## Bug Fixes
+
+- **Search**: Fix `concept`/`concepts` parameter mismatch in `/api/search/by-concept` (#1916)
+- **Search**: Add FTS5 keyword fallback when ChromaDB is unavailable (#1913, #2048)
+- **Database**: Add periodic `clearFailed()` to purge stale pending messages (#1957)
+- **Database**: Add WAL checkpoint schedule and `journal_size_limit` to prevent unbounded growth (#1956)
+- **Worker**: Mark messages as failed (with retry) instead of confirming on non-XML responses (#1874)
+- **Worker**: Include `activeSessions` in `/health` endpoint for queue liveness monitoring (#1867)
+- **Docker**: Fix nounset-safe `TTY_ARGS` expansion in `run.sh`
+- **Search**: Cache `isFts5Available()` at construction time (Greptile review)
+
+## Closed Issues
+
+#1908, #1953, #1916, #1913, #2048, #1957, #1956, #1874, #1867
+
+## [12.3.1] - 2026-04-20
+
+## Error Handling & Code Quality
+
+This patch release resolves error handling anti-patterns across the entire codebase (91 files), improving resilience and correctness.
+
+### Bug Fixes
+
+- **OpenRouterAgent**: Restored assistant replies to `conversationHistory` — multi-turn context was lost after method extraction (#2078)
+- **ChromaSync**: Fixed cross-type dedup collision where `observation#N`, `session_summary#N`, and `user_prompt#N` could silently drop results
+- **Timeline queries**: Fixed logger calls wrapping Error inside an object instead of passing directly
+- **FTS migrations**: Preserved non-Error failure details instead of silently dropping them
+
+### Error Handling Improvements
+
+- Replaced 301 error handling anti-patterns across 91 files:
+  - Narrowed overly broad try-catch blocks into focused error boundaries
+  - Replaced unsafe `error as Error` casts with `instanceof` checks
+  - Added structured error logging where catches were previously empty
+  - Extracted large try blocks into dedicated helper methods
+- **Installer resilience**: Moved filesystem operations (`mkdirSync`) inside try/catch in Cursor, Gemini CLI, Goose MCP, and OpenClaw installers to maintain numeric return-code contracts
+- **GeminiCliHooksInstaller**: Install/uninstall paths now catch `readGeminiSettings()` failures instead of throwing past the `0/1` return contract
+- **OpenClawInstaller**: Malformed `openclaw.json` now throws instead of silently returning `{}` and potentially wiping user config
+- **WindsurfHooksInstaller**: Added null-safe parsing of `hooks.json` with optional chaining
+- **McpIntegrations**: Goose YAML updater now throws when claude-mem markers exist but regex replacement fails
+- **EnvManager**: Directory setup and existing-file reads are now wrapped in structured error logging
+- **WorktreeAdoption**: `adoptedSqliteIds` mutation delayed until SQL update succeeds
+- **Import script**: Guard against malformed timestamps before `toISOString()`
+- **Runtime CLI**: Guard `response.json()` parsing with controlled error output
+
+### Documentation
+
+- Added README for Docker claude-mem harness
+
 ## [12.3.0] - 2026-04-20
 
 ## New features

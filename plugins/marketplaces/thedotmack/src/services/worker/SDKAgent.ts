@@ -90,9 +90,11 @@ export class SDKAgent {
     }
 
     // Wait for agent pool slot (configurable via CLAUDE_MEM_MAX_CONCURRENT_AGENTS)
+    // Pass idle session eviction callback to prevent pool deadlock (#1868):
+    // idle sessions hold slots during 3-min idle wait, blocking new sessions
     const settings = SettingsDefaultsManager.loadFromFile(USER_SETTINGS_PATH);
     const maxConcurrent = parseInt(settings.CLAUDE_MEM_MAX_CONCURRENT_AGENTS, 10) || 2;
-    await waitForSlot(maxConcurrent);
+    await waitForSlot(maxConcurrent, 60_000, () => this.sessionManager.evictIdlestSession());
 
     // Build isolated environment from ~/.claude-mem/.env
     // This prevents Issue #733: random ANTHROPIC_API_KEY from project .env files
@@ -480,7 +482,11 @@ export class SDKAgent {
       if (claudePath) return claudePath;
     } catch (error) {
       // [ANTI-PATTERN IGNORED]: Fallback behavior - which/where failed, continue to throw clear error
-      logger.debug('SDK', 'Claude executable auto-detection failed', {}, error as Error);
+      if (error instanceof Error) {
+        logger.debug('SDK', 'Claude executable auto-detection failed', {}, error);
+      } else {
+        logger.debug('SDK', 'Claude executable auto-detection failed with non-Error', {}, new Error(String(error)));
+      }
     }
 
     throw new Error('Claude executable not found. Please either:\n1. Add "claude" to your system PATH, or\n2. Set CLAUDE_CODE_PATH in ~/.claude-mem/settings.json');
