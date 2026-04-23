@@ -141,10 +141,10 @@
     "claude-mem@thedotmack": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\thedotmack\\claude-mem\\12.3.8",
-        "version": "12.3.8",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\thedotmack\\claude-mem\\12.3.9",
+        "version": "12.3.9",
         "installedAt": "2026-04-18T04:02:22.451Z",
-        "lastUpdated": "2026-04-21T07:04:46.006Z"
+        "lastUpdated": "2026-04-23T08:42:03.707Z"
       }
     ]
   }
