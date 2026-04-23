@@ -77,10 +77,10 @@
       {
         "scope": "project",
         "projectPath": "C:\\Users\\ZDS",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\pua-skills\\pua\\3.2.0",
-        "version": "3.2.0",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\pua-skills\\pua\\3.2.3",
+        "version": "3.2.3",
         "installedAt": "2026-03-26T09:06:03.044Z",
-        "lastUpdated": "2026-04-18T03:27:21.537Z",
+        "lastUpdated": "2026-04-23T09:08:31.768Z",
         "gitCommitSha": "7d039d0aa94cb27723e4188cd72a18c42c1732d2"
       }
     ],
@@ -110,10 +110,10 @@
       {
         "scope": "project",
         "projectPath": "C:\\Users\\ZDS",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\openai-codex\\codex\\1.0.3",
-        "version": "1.0.3",
+        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\openai-codex\\codex\\1.0.4",
+        "version": "1.0.4",
         "installedAt": "2026-03-31T03:09:57.212Z",
-        "lastUpdated": "2026-04-18T03:27:07.223Z",
+        "lastUpdated": "2026-04-23T09:06:16.172Z",
         "gitCommitSha": "9cb4fe4099195b2587c402117a3efce6ab5aac78"
       }
     ],
