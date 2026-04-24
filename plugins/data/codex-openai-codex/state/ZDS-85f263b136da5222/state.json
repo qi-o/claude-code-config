@@ -5,26 +5,6 @@
   },
   "jobs": [
     {
-      "createdAt": "2026-04-24T01:48:51.327Z",
-      "updatedAt": "2026-04-24T01:48:54.124Z",
-      "id": "task-moc950xr-qxciqv",
-      "kind": "task",
-      "kindLabel": "rescue",
-      "title": "Codex Task",
-      "workspaceRoot": "C:/Users/ZDS",
-      "jobClass": "task",
-      "summary": "<task> Review the quality and correctness of two proposed changes: 1. NEW FILE: ~/.claude/ski...",
-      "write": true,
-      "sessionId": "707fb50f-1959-46da-a0f2-74f33ee062bb",
-      "status": "failed",
-      "startedAt": "2026-04-24T01:48:51.618Z",
-      "phase": "failed",
-      "pid": null,
-      "logFile": "C:\\Users\\ZDS\\.claude\\plugins\\data\\codex-openai-codex\\state\\ZDS-85f263b136da5222\\jobs\\task-moc950xr-qxciqv.log",
-      "errorMessage": "Codex CLI is not installed or is missing required runtime support. Install it with `npm install -g @openai/codex`, then rerun `/codex:setup`.",
-      "completedAt": "2026-04-24T01:48:53.587Z"
-    },
-    {
       "createdAt": "2026-04-21T04:27:02.830Z",
       "updatedAt": "2026-04-21T04:35:40.049Z",
       "id": "task-mo84gwmm-nrpxpn",

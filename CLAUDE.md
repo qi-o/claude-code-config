@@ -1,5 +1,5 @@
 <!-- OMC:START -->
-<!-- OMC:VERSION:4.13.2 -->
+<!-- OMC:VERSION:4.13.3 -->
 
 # oh-my-claudecode - Intelligent Multi-Agent Orchestration
 
@@ -23,13 +23,6 @@ Route code to `executor` (use `model=opus` for complex work). Uncertain SDK usag
 `haiku` (quick lookups), `sonnet` (standard), `opus` (architecture, deep analysis).
 Direct writes OK for: `~/.claude/**`, `.omc/**`, `.claude/**`, `CLAUDE.md`, `AGENTS.md`.
 </model_routing>
-
-<rate_limit_fallback>
-子 Agent 失败时的回退策略：
-- 遇到 429/rate-limit 错误 → 立即停止重试 Agent，切换为直接顺序执行
-- 同一任务最多重试 Agent 1 次，第 2 次 429 → 降级为当前 Agent 直接执行
-- 不要通过更换 model 参数重试（429 通常是账户级限制，换模型无效）
-</rate_limit_fallback>
 
 <skills>
 Invoke via `/oh-my-claudecode:<name>`. Trigger patterns auto-detect keywords.
@@ -72,7 +65,6 @@ Say "setup omc" or run `/oh-my-claudecode:omc-setup`.
 <!-- OMC:END -->
 
 <!-- User customizations -->
-
 # graphify
 - **graphify** (`~/.claude/skills/graphify/SKILL.md`) - any input to knowledge graph. Trigger: `/graphify`
 When the user types `/graphify`, invoke the Skill tool with `skill: "graphify"` before doing anything else.
