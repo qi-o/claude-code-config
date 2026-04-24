@@ -24,6 +24,13 @@ Route code to `executor` (use `model=opus` for complex work). Uncertain SDK usag
 Direct writes OK for: `~/.claude/**`, `.omc/**`, `.claude/**`, `CLAUDE.md`, `AGENTS.md`.
 </model_routing>
 
+<rate_limit_fallback>
+子 Agent 失败时的回退策略：
+- 遇到 429/rate-limit 错误 → 立即停止重试 Agent，切换为直接顺序执行
+- 同一任务最多重试 Agent 1 次，第 2 次 429 → 降级为当前 Agent 直接执行
+- 不要通过更换 model 参数重试（429 通常是账户级限制，换模型无效）
+</rate_limit_fallback>
+
 <skills>
 Invoke via `/oh-my-claudecode:<name>`. Trigger patterns auto-detect keywords.
 Tier-0 workflows include `autopilot`, `ultrawork`, `ralph`, `team`, and `ralplan`.
