@@ -16,7 +16,9 @@
     "LETTA_MODE": "whisper",
     "LETTA_SDK_TOOLS": "read-only",
     "MINIMAX_API_KEY": "YOUR_API_KEY_HERE",
-    "ZHIPU_API_KEY": "1326e435339449fd8cfcb076de16b2e2.j0Q8kpouEMOxGpce"
+    "ZHIPU_API_KEY": "1326e435339449fd8cfcb076de16b2e2.j0Q8kpouEMOxGpce",
+    "ENABLE_TOOL_SEARCH": "true",
+    "DISABLE_AUTOUPDATER": "1"
   },
   "attribution": {
     "commit": "",
@@ -35,15 +37,6 @@
             "type": "command",
             "command": "node \"C:/Users/ZDS/.claude/hooks/gsd-prompt-guard.js\"",
             "timeout": 5
-          }
-        ]
-      },
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "rtk hook claude"
           }
         ]
       }
@@ -78,10 +71,10 @@
     }
   },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "high",
   "autoUpdatesChannel": "latest",
   "tui": "fullscreen",
   "autoDreamEnabled": true,
   "skipDangerousModePermissionPrompt": true,
+  "effortLevel": "max",
   "includeCoAuthoredBy": false
 }
