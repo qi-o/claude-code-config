@@ -75,6 +75,6 @@
   "tui": "fullscreen",
   "autoDreamEnabled": true,
   "skipDangerousModePermissionPrompt": true,
-  "effortLevel": "max",
+  "effortLevel": "high",
   "includeCoAuthoredBy": false
 }
