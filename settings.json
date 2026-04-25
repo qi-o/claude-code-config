@@ -24,7 +24,7 @@
     "commit": "",
     "pr": ""
   },
-  "skipAutoPermissionPrompt": true,
+  "includeCoAuthoredBy": false,
   "permissions": {
     "defaultMode": "auto"
   },
@@ -54,7 +54,9 @@
     "pua@pua-skills": true,
     "superpowers@superpowers-marketplace": true,
     "typescript-lsp@claude-plugins-official": true,
-    "claude-mem@thedotmack": true
+    "claude-mem@thedotmack": true,
+    "source-verifier@source-verifier-marketplace": true,
+    "ralph-loop@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "openai-codex": {
@@ -71,10 +73,10 @@
     }
   },
   "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
   "autoUpdatesChannel": "latest",
   "tui": "fullscreen",
   "autoDreamEnabled": true,
   "skipDangerousModePermissionPrompt": true,
-  "effortLevel": "high",
-  "includeCoAuthoredBy": false
+  "skipAutoPermissionPrompt": true
 }

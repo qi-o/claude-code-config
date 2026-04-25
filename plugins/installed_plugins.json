@@ -11,15 +11,6 @@
         "lastUpdated": "2026-04-18T03:26:33.305Z"
       }
     ],
-    "scientific-skills@claude-scientific-skills": [
-      {
-        "scope": "user",
-        "installPath": "C:\\Users\\ZDS\\.claude\\plugins\\cache\\claude-scientific-skills\\scientific-skills\\b271271df41b",
-        "version": "b271271df41b",
-        "installedAt": "2026-01-05T09:59:03.301Z",
-        "lastUpdated": "2026-03-06T13:11:53.905Z"
-      }
-    ],
     "ralph-loop@claude-plugins-official": [
       {
         "scope": "user",
