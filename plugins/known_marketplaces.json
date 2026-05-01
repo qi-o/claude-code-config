@@ -86,14 +86,5 @@
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\karpathy-skills",
     "lastUpdated": "2026-04-23T09:05:59.937Z"
-  },
-  "thedotmack": {
-    "source": {
-      "source": "github",
-      "repo": "thedotmack/claude-mem"
-    },
-    "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\thedotmack",
-    "lastUpdated": "2026-05-01T11:47:52.834Z",
-    "autoUpdate": true
   }
 }

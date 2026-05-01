@@ -41,7 +41,6 @@
     "pua@pua-skills": true,
     "superpowers@superpowers-marketplace": true,
     "typescript-lsp@claude-plugins-official": true,
-    "claude-mem@thedotmack": true,
     "source-verifier@source-verifier-marketplace": true,
     "ralph-loop@claude-plugins-official": true
   },
@@ -50,12 +49,6 @@
       "source": {
         "source": "github",
         "repo": "openai/codex-plugin-cc"
-      }
-    },
-    "thedotmack": {
-      "source": {
-        "source": "github",
-        "repo": "thedotmack/claude-mem"
       }
     }
   },
