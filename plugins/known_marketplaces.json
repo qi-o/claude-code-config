@@ -29,7 +29,7 @@
       "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\omc",
-    "lastUpdated": "2026-04-28T08:42:04.672Z"
+    "lastUpdated": "2026-05-01T11:51:57.230Z"
   },
   "superpowers-marketplace": {
     "source": {
@@ -93,7 +93,7 @@
       "repo": "thedotmack/claude-mem"
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\thedotmack",
-    "lastUpdated": "2026-04-24T07:12:34.209Z",
+    "lastUpdated": "2026-05-01T11:47:52.834Z",
     "autoUpdate": true
   }
 }
