@@ -84,6 +84,8 @@ When approaching DEGRADING tier (>50%):
 - **DO NOT** wait until POOR to save critical state — proactive saves at GOOD
 - **DO NOT** continue spawning research agents at DEGRADING — use existing knowledge
 - **DO NOT** re-read files you already read in this session — trust your memory or notepad
+- **DO NOT** use `@file` or blanket reads at skill entry points — load on demand via `Read()` gated behind mode routing (from GSD v1.39)
 - **DO** warn the user when reaching DEGRADING tier
 - **DO** use subagents for heavy reads (they have fresh context windows)
 - **DO** compress findings into notepad before they are lost to compaction
+- **DO** load files lazily: only when the specific execution branch needs them, not preemptively

@@ -66,12 +66,16 @@ When completing a phase or milestone (not just a single task):
 **Pre-close Audit** — before marking any phase complete, run:
 1. List all artifacts the phase was supposed to produce
 2. For each artifact, verify minimum Level 3 (Wired) per artifact-verification.md
-3. Trace all key_links end-to-end (source → destination → response)
-4. Confirm no pending must_haves from the phase's plan
+3. Auto-detect build system and run build + test (from GSD v1.39):
+   - Detect: `package.json` → `npm run build && npm test`, `Cargo.toml` → `cargo build && cargo test`, `Makefile` → `make && make test`, `justfile` → `just build && just test`, `*.xcodeproj` → `xcodebuild build/test`, `go.mod` → `go build ./... && go test ./...`, `pyproject.toml` / `setup.py` → `pytest`
+   - Gate: zero build errors AND zero test failures required to proceed
+   - If no build system detected → skip this step (not all projects have automated builds)
+4. Trace all key_links end-to-end (source → destination → response)
+5. Confirm no pending must_haves from the phase's plan
 
 **Gate Decision**:
-- ALL artifacts at Level 3+ AND all key_links wired → PASS, phase may close
-- ANY artifact below Level 3 OR any key_link broken → FAIL, phase NOT complete
+- ALL artifacts at Level 3+ AND all key_links wired AND build/test gate passed → PASS, phase may close
+- ANY artifact below Level 3 OR any key_link broken OR build/test failures → FAIL, phase NOT complete
 - UNKNOWN artifacts (cannot verify) → delegate to verifier agent before closing
 
 This gate is MANDATORY for:

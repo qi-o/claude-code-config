@@ -27,6 +27,10 @@ ORPHAN WORKTREE: <path> (path no longer exists)
   To clean up: git worktree remove "<path>" --force
 ```
 
+### Safe Cleanup Strategy (from GSD v1.39)
+
+Use **inclusion filter** (not exclusion) when cleaning up agent worktrees. Only target paths matching `.claude/worktrees/agent-*` or `.omc/worktrees/`. Exclusion-based cleanup can destroy `.git` pointers in multi-workspace and cross-drive Windows setups.
+
 ### Graceful degradation
 
 - If `git worktree` command is unavailable → skip check, proceed normally

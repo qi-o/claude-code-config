@@ -97,12 +97,17 @@ If you make **5+ consecutive Read/Grep/Glob calls** without any Edit/Write/Bash 
 2. If you don't know why → delegate to a fresh subagent with the full context
 3. If you're uncertain about approach → this is a Rule 4 deviation (ask user)
 
+## Orchestrator Wait Rule (from GSD v1.39)
+
+After spawning any Task/Agent, the orchestrator MUST wait for the result before continuing. Fire-and-forget spawns are forbidden unless explicitly declared as background tasks (via `run_in_background` or equivalent). Every spawn site must have a clear result-consumption point.
+
 ## Rules
 
 - **DO NOT** silently deviate from the plan without logging
 - **DO NOT** fix pre-existing bugs (out of scope) — log them as deferred
 - **DO NOT** make architectural decisions autonomously — always STOP for Rule 4
 - **DO NOT** exceed 3 auto-fix attempts per bug — document and move on
+- **DO NOT** spawn subagents without awaiting their results (unless background)
 - **DO** log every deviation, even successful auto-fixes
 - **DO** escalate to user when 3+ deviations accumulate
 - **DO** distinguish between "plan needs adjustment" (Rules 1-3) and "plan is wrong" (Rule 4)
