@@ -45,6 +45,15 @@ This rule applies when:
 - Running `git worktree add`
 - Starting `ultrawork` or `ralph` modes that spawn parallel agents in worktrees
 
+## Branch Isolation
+
+Agent operations in worktrees that will modify files MUST create a new branch rather than operating on the user's currently checked-out branch. Read-only operations (review, research, search) may use the existing branch.
+
+When creating agent branches:
+- Use naming consistent with the calling workflow: `omc-team/{team}/{worker}` for team mode, `agent/<verb>-<scope>` for standalone agents
+- Never operate directly on `main`, `master`, or the user's active branch
+- On completion, agent branches may be merged or deleted at user discretion (see Safe Cleanup Strategy above)
+
 ## Anti-Patterns
 
 - **Do not** automatically remove worktrees without user confirmation
