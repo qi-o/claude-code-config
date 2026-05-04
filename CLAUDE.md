@@ -1,5 +1,5 @@
 <!-- OMC:START -->
-<!-- OMC:VERSION:4.13.5 -->
+<!-- OMC:VERSION:4.13.6 -->
 
 # oh-my-claudecode - Intelligent Multi-Agent Orchestration
 
@@ -21,7 +21,6 @@ Route code to `executor` (use `model=opus` for complex work). Uncertain SDK usag
 
 <model_routing>
 `haiku` (quick lookups), `sonnet` (standard), `opus` (architecture, deep analysis).
-Fallback on failure: `opus` → `sonnet` → `haiku` (applies when routing to Claude models via OMC agents; non-Claude providers handle retries independently). Budget: max 3 attempts, cumulative retry time ≤ 60s. Log tier change in session output so user knows a lower-capability model was used.
 Direct writes OK for: `~/.claude/**`, `.omc/**`, `.claude/**`, `CLAUDE.md`, `AGENTS.md`.
 </model_routing>
 
