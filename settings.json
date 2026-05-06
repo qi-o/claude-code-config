@@ -52,5 +52,6 @@
   "tui": "default",
   "autoDreamEnabled": true,
   "skipDangerousModePermissionPrompt": true,
-  "includeCoAuthoredBy": false
+  "includeCoAuthoredBy": false,
+  "skillListingBudgetFraction": 0.03
 }
