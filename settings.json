@@ -2,25 +2,48 @@
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "PROXY_MANAGED",
     "ANTHROPIC_BASE_URL": "http://127.0.0.1:6667",
-    "LETTA_SDK_TOOLS": "read-only",
-    "LETTA_API_KEY": "sk-let-MjU2ZjgxYzktMzg3MS00ZmIzLWJjZmQtMjhiNDI2M2FmOTJjOjJkYjIwM2JkLWEzMGUtNDQwNS1hNzkzLThmM2Q5ZDAyMDM1OA==",
+    "MINIMAX_API_KEY": "YOUR_API_KEY_HERE",
     "LETTA_MODE": "whisper",
+    "LETTA_SDK_TOOLS": "read-only",
     "DISABLE_AUTOUPDATER": "1",
     "ZHIPU_API_KEY": "1326e435339449fd8cfcb076de16b2e2.j0Q8kpouEMOxGpce",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "ENABLE_LSP_TOOL": "1",
-    "ENABLE_TOOL_SEARCH": "true",
     "GETNOTE_API_KEY": "gk_live_3f263a50a9c3ba55.eb99c98b584c646f86ba997e47123da46f12dae046fb416e",
     "GETNOTE_CLIENT_ID": "cli_3802f9db08b811f197679c63c078bacc",
-    "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_TOKEN_HERE"
+    "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_TOKEN_HERE",
+    "LETTA_API_KEY": "sk-let-MjU2ZjgxYzktMzg3MS00ZmIzLWJjZmQtMjhiNDI2M2FmOTJjOjJkYjIwM2JkLWEzMGUtNDQwNS1hNzkzLThmM2Q5ZDAyMDM1OA=="
   },
   "attribution": {
     "commit": "",
     "pr": ""
   },
-  "tui": "fullscreen",
+  "skipAutoPermissionPrompt": true,
   "permissions": {
     "defaultMode": "auto"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:/Users/ZDS/.claude/hooks/gsd-prompt-guard.js\"",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "rtk hook claude"
+          }
+        ]
+      }
+    ]
   },
   "statusLine": {
     "type": "command",
@@ -32,27 +55,24 @@
     "codex@openai-codex": true,
     "oh-my-claudecode@omc": true,
     "pua@pua-skills": true,
-    "source-verifier@source-verifier-marketplace": true,
     "superpowers@superpowers-marketplace": true,
-    "typescript-lsp@claude-plugins-official": true
+    "typescript-lsp@claude-plugins-official": true,
+    "source-verifier@source-verifier-marketplace": true,
+    "ralph-loop@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
-    "pua-skills": {
+    "openai-codex": {
       "source": {
         "source": "github",
-        "repo": "tanweai/pua"
-      }
-    },
-    "source-verifier-marketplace": {
-      "source": {
-        "source": "github",
-        "repo": "Luxuzhou/source-verifier-skill"
+        "repo": "openai/codex-plugin-cc"
       }
     }
   },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "xhigh",
+  "effortLevel": "high",
+  "autoUpdatesChannel": "latest",
+  "tui": "fullscreen",
+  "autoDreamEnabled": true,
   "skipDangerousModePermissionPrompt": true,
-  "skipAutoPermissionPrompt": true,
   "includeCoAuthoredBy": false
 }

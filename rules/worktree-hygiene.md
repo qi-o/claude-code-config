@@ -31,6 +31,8 @@ ORPHAN WORKTREE: <path> (path no longer exists)
 
 Use **inclusion filter** (not exclusion) when cleaning up agent worktrees. Only target paths matching `.claude/worktrees/agent-*` or `.omc/worktrees/`. Exclusion-based cleanup can destroy `.git` pointers in multi-workspace and cross-drive Windows setups.
 
+进一步（GSD v1.41.0 #3117）：即使有 inclusion filter，`git worktree remove --force` 仍可在 Windows 路径分隔符不匹配时误删兄弟 worktree。推荐只做 `git worktree prune`（元数据清理），禁止自动 force-remove。
+
 ### Graceful degradation
 
 - If `git worktree` command is unavailable → skip check, proceed normally
@@ -53,6 +55,22 @@ When creating agent branches:
 - Use naming consistent with the calling workflow: `omc-team/{team}/{worker}` for team mode, `agent/<verb>-<scope>` for standalone agents
 - Never operate directly on `main`, `master`, or the user's active branch
 - On completion, agent branches may be merged or deleted at user discretion (see Safe Cleanup Strategy above)
+
+## Path Safety (from GSD v1.41.0)
+
+Agents operating inside worktrees MUST guard against two silent failure modes:
+
+### cwd-drift sentinel
+
+After a Bash `cd` out of the worktree into the main repo, `[ -f .git ]` becomes false (`.git` is a directory in main repo), silently skipping all HEAD/branch safety guards. Commits land on the main repo's active branch.
+
+**Detection**: On first commit in a worktree, capture `git rev-parse --show-toplevel` as sentinel. Before every subsequent commit, verify current toplevel matches the sentinel. On mismatch: halt with recovery instructions.
+
+### Absolute-path guard
+
+File paths from the orchestrator are relative to the main repo root. When an agent uses these as absolute paths in Edit/Write calls, writes land in the main repo instead of the worktree. The agent's `git commit` sees a clean tree — work is silently lost.
+
+**Prevention**: Before any Edit/Write using an absolute path, verify it starts with the worktree root (`git rev-parse --show-toplevel`). Prefer relative paths; derive absolute paths from the worktree root, never from the orchestrator's pwd.
 
 ## Anti-Patterns
 
