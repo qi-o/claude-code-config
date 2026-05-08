@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "config": {
+    "stopReviewGate": false
+  },
+  "jobs": [
+    {
+      "createdAt": "2026-05-08T14:51:23.040Z",
+      "updatedAt": "2026-05-08T14:53:53.812Z",
+      "id": "task-mox19afz-48l6qt",
+      "kind": "task",
+      "kindLabel": "rescue",
+      "title": "Codex Task",
+      "workspaceRoot": "C:/Users/ZDS/.claude/skills",
+      "jobClass": "task",
+      "summary": "- [SEVERITY: LOW] Stale reference: Deleted `pub-figures` still appears as standalone source metadata",
+      "write": true,
+      "sessionId": "e8104836-fd75-4d5e-884f-d0dc09407534",
+      "status": "completed",
+      "startedAt": "2026-05-08T14:51:23.605Z",
+      "phase": "done",
+      "pid": null,
+      "logFile": "C:\\Users\\ZDS\\.claude\\plugins\\data\\codex-openai-codex\\state\\skills-128539e8b7d31695\\jobs\\task-mox19afz-48l6qt.log",
+      "threadId": "019e0812-a143-76d2-989a-15a056e473cf",
+      "turnId": "019e0812-c12f-7233-9aeb-496c5c3e5273",
+      "completedAt": "2026-05-08T14:53:52.723Z"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "endpoint": "pipe:\\\\.\\pipe\\cxc-eKFE72-codex-app-server",
+  "pidFile": "C:\\Users\\ZDS\\AppData\\Local\\Temp\\cxc-eKFE72\\broker.pid",
+  "logFile": "C:\\Users\\ZDS\\AppData\\Local\\Temp\\cxc-eKFE72\\broker.log",
+  "sessionDir": "C:\\Users\\ZDS\\AppData\\Local\\Temp\\cxc-eKFE72",
+  "pid": 31708
+}
