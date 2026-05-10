@@ -54,7 +54,6 @@
     "claude-subconscious@claude-subconscious": true,
     "codex@openai-codex": true,
     "oh-my-claudecode@omc": true,
-    "pua@pua-skills": true,
     "superpowers@superpowers-marketplace": true,
     "typescript-lsp@claude-plugins-official": true,
     "source-verifier@source-verifier-marketplace": true,
