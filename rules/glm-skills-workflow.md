@@ -42,14 +42,17 @@
 ## 工作流衔接
 
 ```
-文献搜索（ai4scholar）
+文献搜索（ai4scholar / paper-search）
     ↓
 论文 PDF 获取
     ↓
+├─ 全文精读 → nature-reader（双语 Markdown + 源锚点 + 图表就近）
 ├─ 文本提取 → ai4scholar read / MinerU / glmocr-sdk
 ├─ 图表理解 → glmv-caption（多模态视觉分析）
 ├─ 图像标注 → glmv-grounding（目标定位）
-└─ 组会汇报 → glmv-pdf-to-ppt（论文转演示）
+├─ 组会汇报 → glmv-pdf-to-ppt（论文转演示）
+├─ 补引用 → nature-citation（CNS 严格引用）
+└─ 润色翻译 → nature-polishing（Nature 风格润色）
     ↓
 写作输出 → academic-writing-suite
 ```
