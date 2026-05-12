@@ -78,5 +78,13 @@
     },
     "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\karpathy-skills",
     "lastUpdated": "2026-05-09T09:11:34.231Z"
+  },
+  "pua-skills": {
+    "source": {
+      "source": "github",
+      "repo": "tanweai/pua"
+    },
+    "installLocation": "C:\\Users\\ZDS\\.claude\\plugins\\marketplaces\\pua-skills",
+    "lastUpdated": "2026-05-11T16:32:46.438Z"
   }
 }

@@ -18,7 +18,7 @@
     "commit": "",
     "pr": ""
   },
-  "skipAutoPermissionPrompt": true,
+  "includeCoAuthoredBy": false,
   "permissions": {
     "defaultMode": "auto"
   },
@@ -68,10 +68,9 @@
     }
   },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "max",
   "autoUpdatesChannel": "latest",
-  "tui": "fullscreen",
   "autoDreamEnabled": true,
   "skipDangerousModePermissionPrompt": true,
-  "includeCoAuthoredBy": false
+  "skipAutoPermissionPrompt": true,
+  "tui": "fullscreen"
 }
