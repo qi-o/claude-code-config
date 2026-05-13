@@ -33,6 +33,23 @@ Use **inclusion filter** (not exclusion) when cleaning up agent worktrees. Only 
 
 进一步（GSD v1.41.0 #3117）：即使有 inclusion filter，`git worktree remove --force` 仍可在 Windows 路径分隔符不匹配时误删兄弟 worktree。推荐只做 `git worktree prune`（元数据清理），禁止自动 force-remove。
 
+### Fail-Closed Strategy (from GSD v1.42.0 #3385)
+
+当安全检查无法证明清理目标是安全的时，选择**不执行清理**而不是继续操作。
+
+- 无法确认 worktree 状态 → 不删除，报告给用户
+- `git worktree list` 返回异常/不完整 → 不操作，报告给用户
+- 路径匹配不确定 → 不删除，报告给用户
+- **原则**：不确定 = 不安全 = 不操作
+
+### Health Check Timeout (from GSD v1.42.0 #3283)
+
+Worktree 健康检查的子进程必须设置超时上限：
+
+- `git worktree list`、`git status` 等操作设置 **30 秒超时**
+- 超时后报告为 "health check timed out"，不无限阻塞
+- 超时不等于失败 — 报告状态后让用户决定下一步
+
 ### Graceful degradation
 
 - If `git worktree` command is unavailable → skip check, proceed normally

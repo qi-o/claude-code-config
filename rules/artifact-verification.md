@@ -22,7 +22,7 @@ Content is real implementation, not placeholder or stub.
 
 | Check | What to Grep For (Red Flags) |
 |-------|------------------------------|
-| No TODO/FIXME markers | `TODO\|FIXME\|XXX\|HACK\|PLACEHOLDER` |
+| No TODO/FIXME/TBD markers | `TODO\|FIXME\|XXX\|HACK\|PLACEHOLDER\|TBD` |
 | No placeholder text | `placeholder\|lorem ipsum\|coming soon\|your code here` |
 | No empty implementations | `return null;\|return {};\|return [];\|pass$` |
 | Meaningful line count | File > 10-15 lines for components, > 5 for utilities |
@@ -78,7 +78,7 @@ Universal patterns that indicate a file is NOT substantive:
 
 ### Comment-Based Stubs
 ```
-TODO|FIXME|XXX|HACK|PLACEHOLDER|STUB
+TODO|FIXME|XXX|HACK|PLACEHOLDER|STUB|TBD
 ```
 
 ### Placeholder Text
@@ -111,6 +111,26 @@ return []  # empty array response
 # no error handling
 # no input validation
 ```
+
+## Formal Deferral Exception (from GSD v1.42.0 #3343)
+
+TBD/FIXME/XXX 标记如果携带正式延期引用，不算 stub。格式：
+
+```
+TBD(defer:PROJ-123)     — 关联到具体 issue/ticket
+FIXME(defer:reason)      — 附带延后原因
+XXX(tracked:JIRA-456)   — 已有追踪
+```
+
+无延期引用的 TBD/FIXME/XXX → 视为 stub，阻断完成。
+
+## Completion Blocking Rule
+
+Verifier 在标记任务完成前，必须扫描所有产出文件中的 `TBD`、`FIXME`、`XXX` 标记：
+
+- **有正式延期引用** → 记录为 deferred，不阻断
+- **无正式延期引用** → 阻断完成，必须解决或补充延期引用
+- **此规则优先于** Level 2 的 SUBSTANTIVE 判定：即使文件内容充实，未决标记仍需处理
 
 ## Status Combinations
 

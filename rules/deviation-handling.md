@@ -89,6 +89,20 @@ Deviation handling applies **only during active implementation**:
 - **Applies to**: executor agent, debugger agent during fix implementation
 - **Does NOT apply to**: planner agent (planning phase), reviewer agent (review phase), research agents
 
+## Safe-Resume: Drift Detection (from GSD v1.42.0 #3329)
+
+When execution is interrupted and later resumed (context compaction, session restart, agent handoff):
+
+1. **Detect drift before continuing**: Compare current codebase state against the plan. Check:
+   - Files the plan expected to be modified — are they still in the expected state?
+   - Branch — still on the correct branch?
+   - Dependencies — still installed and compatible?
+2. **If drift detected**: Log as a deviation, reassess whether the plan is still valid
+3. **If no drift**: Resume from the last completed step
+4. **Never assume** that state is unchanged after an interruption — always verify
+
+This prevents duplicate executor dispatch and conflicting changes when resuming interrupted work.
+
 ## Analysis Paralysis Guard
 
 If you make **5+ consecutive Read/Grep/Glob calls** without any Edit/Write/Bash action:

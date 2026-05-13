@@ -49,15 +49,17 @@ For each key_link in must_haves:
 - Verify target actually receives and processes the input
 - Record: `[PASS/FAIL] Key Link: [from] -> [to] -- Evidence: [...]`
 
-### Step 4: Gate Decision
+### Step 4: Gate Decision (from GSD v1.42.0 #3339)
 ```
 IF any truth FAILED → task NOT complete
 IF any artifact below minimum level → task NOT complete
 IF any key_link not wired → task NOT complete
-IF any must_have is UNKNOWN (not yet verified due to context limits) → save state, flag remaining items, delegate to fresh agent or escalate to user
+IF any must_have is UNKNOWN (not yet verified due to context limits) → FAIL (not pass), save state, flag remaining items, delegate to fresh agent or escalate to user
 IF must_haves from different sources contradict → escalate to user, do NOT resolve autonomously
 ELSE → task complete
 ```
+
+**Verification State Semantics**: 只有显式 `PASS` 计为通过。`pending`、`unknown`、空值、`assumed` 均视为 FAIL。不允许将未验证状态视为隐式通过。
 
 ### Phase/Milestone Gate (from GSD v1.36)
 
